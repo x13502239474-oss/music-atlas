@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 24,
+      "done": 31,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -152,12 +152,12 @@
             29
           ],
           "count": 8,
-          "done": 1,
+          "done": 8,
           "chapters": [
             {
               "order": 22,
-              "slug": null,
-              "title": null
+              "slug": "m1-22-basso",
+              "title": "通奏低音：一行数字，把音乐从「线的对位」换成了「柱的和声」"
             },
             {
               "order": 23,
@@ -166,33 +166,33 @@
             },
             {
               "order": 24,
-              "slug": null,
-              "title": null
+              "slug": "m1-24-chamber",
+              "title": "室内与教堂：同一套零件，装出了三种巴洛克体裁"
             },
             {
               "order": 25,
-              "slug": null,
-              "title": null
+              "slug": "m1-25-national",
+              "title": "一个意大利人，替法国发明了\"法国音乐\""
             },
             {
               "order": 26,
-              "slug": null,
-              "title": null
+              "slug": "m1-26-late17",
+              "title": "大协奏曲：让乐队学会对话"
             },
             {
               "order": 27,
-              "slug": null,
-              "title": null
+              "slug": "m1-27-early18",
+              "title": "那不勒斯把歌剧变成了唱段集"
             },
             {
               "order": 28,
-              "slug": null,
-              "title": null
+              "slug": "m1-28-bach-handel",
+              "title": "巴赫与亨德尔：同年出生，走了两条相反的路"
             },
             {
               "order": 29,
-              "slug": null,
-              "title": null
+              "slug": "m1-29-aesthetics",
+              "title": "巴洛克：一部作品只表达一种情绪"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 16,
+      "done": 23,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -483,7 +483,7 @@
             26
           ],
           "count": 8,
-          "done": 1,
+          "done": 8,
           "chapters": [
             {
               "order": 19,
@@ -492,38 +492,38 @@
             },
             {
               "order": 20,
-              "slug": null,
-              "title": null
+              "slug": "m2-20-zuoli",
+              "title": "坐部伎与立部伎：等级写在坐与立之间"
             },
             {
               "order": 21,
-              "slug": null,
-              "title": null
+              "slug": "m2-21-qiuzi",
+              "title": "龟兹乐：一套改写唐代音响的乐器与乐调"
             },
             {
               "order": 22,
-              "slug": null,
-              "title": null
+              "slug": "m2-22-jiaofang",
+              "title": "教坊、梨园与大乐署：把音乐生产切成三道工序"
             },
             {
               "order": 23,
-              "slug": null,
-              "title": null
+              "slug": "m2-23-quzi",
+              "title": "曲子：词的音乐源头，藏在敦煌的写本里"
             },
             {
               "order": 24,
-              "slug": null,
-              "title": null
+              "slug": "m2-24-bianwen",
+              "title": "变文：佛经故事怎样变成可以\"听\"的讲唱"
             },
             {
               "order": 25,
-              "slug": null,
-              "title": null
+              "slug": "m2-25-jipu",
+              "title": "记谱法：没有录音的时代，乐谱如何留住声音"
             },
             {
               "order": 26,
-              "slug": null,
-              "title": null
+              "slug": "m2-26-waichuan",
+              "title": "唐代音乐的外传：一首曲子怎样渡海活下来"
             }
           ]
         },
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 40
+  "grandDone": 54
 }
