@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+import progress from '../data/progress.json';
+
+const pct = (a: number, b: number) => b ? Math.round(a / b * 100) : 0;
+const grandPct = pct(progress.grandDone, progress.grandTotal);
+---
+
+<Base title="建设进度" description="七大模块的章节完成度与逐章状态">
+
+<div class="pg-wrap">
+  <div class="pg-head">
+    <div class="kicker">Building the Library</div>
+    <h1>建设进度</h1>
+    <p class="lead">一座可以长期阅读、持续扩充的音乐图书馆。这里如实记录每一章的状态——已写成的可读，未写成的保留编号、如实标注，不以填充内容充数。</p>
+  </div>
+
+  <div class="pg-total">
+    <div class="t-num">{progress.grandDone}<span> / {progress.grandTotal}</span></div>
+    <div class="t-body">
+      <div class="t-label">全站章节完成度 · {grandPct}%</div>
+      <div class="bar"><i style={`width:${grandPct}%`}></i></div>
+      <div class="t-note">更新于 {progress.generated} · 每章 5000–7500 字，含来源标注与待核验清单</div>
+    </div>
+  </div>
+
+  <div class="pg-modules">
+    {progress.modules.map((m: any) => {
+      const mp = pct(m.done, m.total);
+      return (
+        <section class="pg-mod">
+          <div class="mod-head-row">
+            <span class="mod-id">{m.id}</span>
+            <h2>{m.name}</h2>
+            <span class="mod-count">{m.done} / {m.total} 章 · {mp}%</span>
+          </div>
+          <div class="bar slim"><i style={`width:${mp}%`}></i></div>
+          <div class="parts">
+            {m.parts.map((part: any) => (
+              <div class="part-row">
+                <div class="part-name">
+                  <span class="pn">{part.name}</span>
+                  <span class="pd">{part.done}/{part.count}</span>
+                </div>
+                <div class="dots">
+                  {part.chapters.map((c: any) => (
+                    c.slug
+                      ? <a class="dot done" href={`${import.meta.env.BASE_URL}read/${c.slug}`} title={`第 ${c.order} 章 · ${c.title ?? ''}`}>{c.order}</a>
+                      : <span class="dot todo" title={`第 ${c.order} 章 · 待撰写`}>{c.order}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+
+  <div class="pg-legend">
+    <span><i class="lg done"></i>已写成（可点击阅读）</span>
+    <span><i class="lg todo"></i>待撰写（保留章号）</span>
+    <p>点击任一深色章号进入阅读。浅色章号是规划中的章节——它会出现，但只在使用真实来源、达到写作规范后才写。</p>
+  </div>
+</div>
+
+</Base>
+
+<style>
+  .pg-wrap { max-width: 940px; margin: 0 auto; padding: 72px 28px 100px; }
+  .pg-head { text-align: center; max-width: 620px; margin: 0 auto 54px; }
+  .kicker { font-family: var(--serif); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--bronze); }
+  .pg-head h1 { font-size: 40px; font-weight: 500; letter-spacing: .08em; margin: 14px 0 18px; color: var(--ink-strong); }
+  .pg-head .lead { font-size: 15px; line-height: 2; color: var(--muted); }
+  .pg-total { display: flex; gap: 34px; align-items: center; background: var(--paper-2); border: 1px solid var(--line); padding: 30px 36px; margin-bottom: 50px; }
+  .t-num { font-family: var(--serif); font-size: 46px; color: var(--red); line-height: 1; white-space: nowrap; }
+  .t-num span { font-size: 22px; color: var(--muted); }
+  .t-body { flex: 1; }
+  .t-label { font-size: 15px; font-weight: 600; color: var(--ink-strong); margin-bottom: 12px; }
+  .t-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .bar { height: 5px; background: rgba(58,46,38,.12); overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--red); }
+  .bar.slim { height: 3px; margin: 12px 0 20px; }
+  .pg-mod { border-top: 1px solid var(--line); padding: 30px 0 34px; }
+  .mod-head-row { display: flex; align-items: baseline; gap: 16px; }
+  .mod-id { font-family: var(--serif); font-size: 12px; letter-spacing: .18em; color: var(--bronze); }
+  .mod-head-row h2 { font-size: 23px; font-weight: 500; color: var(--ink-strong); letter-spacing: .04em; }
+  .mod-count { margin-left: auto; font-size: 13px; color: var(--muted); }
+  .parts { display: flex; flex-direction: column; gap: 13px; }
+  .part-row { display: grid; grid-template-columns: 200px 1fr; gap: 18px; align-items: start; }
+  .part-name { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--ink); padding-top: 4px; }
+  .part-name .pd { color: var(--muted); font-size: 12px; }
+  .dots { display: flex; flex-wrap: wrap; gap: 5px; }
+  .dot { display: inline-flex; align-items: center; justify-content: center; min-width: 27px; height: 27px; padding: 0 4px; font-family: var(--serif); font-size: 11px; text-decoration: none; border: 1px solid var(--line); }
+  .dot.done { background: var(--red); color: #fff; border-color: var(--red); }
+  .dot.done:hover { background: var(--ink-strong); }
+  .dot.todo { color: rgba(58,46,38,.3); background: transparent; }
+  .pg-legend { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+  .pg-legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .lg { width: 14px; height: 14px; display: inline-block; }
+  .lg.done { background: var(--red); }
+  .lg.todo { border: 1px solid var(--line); }
+  .pg-legend p { flex-basis: 100%; line-height: 1.9; }
+  @media (max-width: 640px) {
+    .pg-wrap { padding: 48px 18px 70px; }
+    .pg-head h1 { font-size: 30px; }
+    .pg-total { flex-direction: column; align-items: flex-start; gap: 18px; padding: 24px; }
+    .part-row { grid-template-columns: 1fr; gap: 6px; }
+    .mod-head-row { flex-wrap: wrap; }
+    .mod-count { margin-left: 0; flex-basis: 100%; }
+  }
+</style>

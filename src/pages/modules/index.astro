@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allChapters, modules, parts } from '../../lib/site';
+
+const chapters = await allChapters();
+---
+
+<Base title="目录">
+  <div class="mod-head">
+    <div class="kicker">Tabula Operis</div>
+    <h1>全书目录</h1>
+    <p class="lead">
+      七个模块，两条音乐史主线。每篇下面标出的章号是最终编号，未写的章保留位置——不删，以便看出结构是否失衡。
+    </p>
+  </div>
+
+  <div class="part-list">
+    {
+      modules.map((m, i) => {
+        const n = chapters.filter((c) => c.data.module === m.id).length;
+        const ps = parts[m.id] ?? [];
+        return (
+          <div class="part">
+            <div class="part-head">
+              <span class="n">MODULE {String(i + 1).padStart(2, '0')} · {m.id}</span>
+              <h2><a href={`${import.meta.env.BASE_URL}modules/${m.slug}`} style="color:inherit">{m.title}</a></h2>
+              <span class="span">{n} / {m.count} 章</span>
+            </div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.9;margin:0 0 10px">{m.lead}</p>
+            {ps.length ? (
+              <div style="font-size:13px;line-height:2;color:var(--muted)">
+                {ps.map((p) => (
+                  <span style="margin-right:18px;white-space:nowrap">
+                    <span style="font-family:var(--serif);color:var(--bronze)">第{p.n}篇</span> {p.title}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        );
+      })
+    }
+  </div>
+</Base>

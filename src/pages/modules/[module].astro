@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allChapters, modules, parts, works } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return modules.map((m) => ({ params: { module: m.slug }, props: { m } }));
+}
+
+const { m } = Astro.props;
+const chapters = await allChapters();
+const mine = chapters.filter((c) => c.data.module === m.id);
+const ps = (parts[m.id] ?? []) as any[];
+const idx = modules.findIndex((x) => x.id === m.id);
+---
+
+<Base title={m.title} description={m.lead}>
+  <div class="mod-head">
+    <div class="kicker">Module {String(idx + 1).padStart(2, '0')} · {m.id}</div>
+    <h1>{m.title}</h1>
+    <p class="lead">{m.lead}</p>
+    <p class="note">{m.note}</p>
+  </div>
+
+  <div class="part-list">
+    {
+      ps.length ? (
+        ps.map((p) => {
+          const inPart = mine.filter((c) => c.data.part === p.n).sort((a, b) => a.data.order - b.data.order);
+          const rangeCount = p.range[1] - p.range[0] + 1;
+          const rest = rangeCount - inPart.length;
+          return (
+            <div class={`part ${p.deferred ? 'deferred' : ''}`}>
+              <div class="part-head">
+                <span class="n">第 {p.n} 篇</span>
+                <h2>{p.title}</h2>
+                <span class="span">{p.span}</span>
+              </div>
+              <ul class="ch-list">
+                {inPart.map((c) => (
+                  <li>
+                    <a class="ch-item" href={`${import.meta.env.BASE_URL}read/${c.data.slug}`}>
+                      <span class="no">{String(c.data.order).padStart(2, '0')}</span>
+                      <span>
+                        <span class="tt">{c.data.title}</span>
+                        <span class="sm">{c.data.summary}</span>
+                      </span>
+                      <span class="meta">{c.data.readingMinutes} 分钟</span>
+                    </a>
+                  </li>
+                ))}
+                {rest > 0 ? (
+                  <li>
+                    <span class="ch-item pending">
+                      <span class="no">—</span>
+                      <span>
+                        <span class="tt">{p.deferred ? '本篇暂缓' : `另有 ${rest} 章待撰写`}</span>
+                        <span class="sm">
+                          {p.deferred
+                            ? '1949 年后中国音乐史须另立来源，经决定后置；不写推测性内容。'
+                            : `章号 ${p.range[0]}—${p.range[1]}。未写成的章保留编号，不在目录中隐去。`}
+                        </span>
+                      </span>
+                      <span class="meta" />
+                    </span>
+                  </li>
+                ) : null}
+              </ul>
+            </div>
+          );
+        })
+      ) : (
+        <div class="part">
+          <div class="part-head">
+            <span class="n">篇目</span>
+            <h2>待细化</h2>
+            <span class="span">{m.count} 章</span>
+          </div>
+          {m.id === 'M5' ? (
+            <ul class="ch-list">
+              {works.map((w, i) => (
+                <li>
+                  <span class="ch-item pending">
+                    <span class="no">{String(i + 1).padStart(2, '0')}</span>
+                    <span>
+                      <span class="tt">{w.title}</span>
+                      <span class="sm">{w.composer} · {w.year} · {w.cat}</span>
+                    </span>
+                    <span class="meta">待写</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p style="font-size:14px;color:var(--muted);line-height:2">
+              本模块章目已在《知识体系总纲》中确定，正文尚未开工。共 {m.count} 章。
+            </p>
+          )}
+        </div>
+      )
+    }
+  </div>
+</Base>

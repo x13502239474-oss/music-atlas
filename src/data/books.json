@@ -1,0 +1,143 @@
+{
+  "_note": "10 部指定参考书 + 外部权威来源。章节号来自实际读取的目录（PDF 书签 / 目录页 OCR / EPUB 结构）。",
+  "books": [
+    {
+      "id": "yu-2001",
+      "short": "于著",
+      "title": "西方音乐通史",
+      "author": "于润洋 主编",
+      "publisher": "上海音乐出版社",
+      "year": 2001,
+      "edition": "第 1 版",
+      "isbn": "7-80553-950-2",
+      "lang": "zh",
+      "role": "M1 中文体系主轴：分期、术语、教学口径",
+      "structure": "七编：古代希腊罗马 / 中世纪 / 文艺复兴 / 巴罗克 / 古典主义 / 浪漫主义 / 20 世纪",
+      "limits": "不含古代近东与古埃及；20 世纪编章目未完全 OCR"
+    },
+    {
+      "id": "ahwm-10e",
+      "short": "AHWM",
+      "title": "A History of Western Music",
+      "author": "J. Peter Burkholder / Donald Jay Grout / Claude V. Palisca",
+      "publisher": "W. W. Norton",
+      "year": 2019,
+      "edition": "10th edition",
+      "lang": "en",
+      "role": "M1 进阶：争议、原始文献（Source Reading）、表演实践（In Performance）",
+      "structure": "6 Part / 39 Chapter，另有 Timeline 与 Source Reading 栏目",
+      "limits": "古代近东着墨较多、埃及极简；非欧地区几乎不涉及"
+    },
+    {
+      "id": "yang-1981",
+      "short": "杨著",
+      "title": "中国古代音乐史稿（上、下册）",
+      "author": "杨荫浏",
+      "publisher": "人民音乐出版社",
+      "year": 1981,
+      "edition": "第 1 版",
+      "lang": "zh",
+      "role": "M2 古代主轴：八编分期，史料与形态描述",
+      "structure": "八编：原始 / 夏商 / 西周春秋战国 / 秦汉三国两晋南北朝 / 隋唐五代 / 辽宋西夏金 / 元 / 明清",
+      "limits": "成书年代较早，含特定时期评价性话语，本项目作为学术史现象呈现，不作结论"
+    },
+    {
+      "id": "wang-2018",
+      "short": "汪著",
+      "title": "中国近现代音乐史",
+      "author": "汪毓和",
+      "publisher": "人民音乐出版社",
+      "year": 2018,
+      "edition": "第三次修订版",
+      "lang": "zh",
+      "role": "M2 近代主轴",
+      "structure": "引言 + 八章 + 结语；第一章即处理传统音乐的新发展",
+      "limits": "止于 1949 年，M2 第八篇（1949— ）不在本书范围"
+    },
+    {
+      "id": "yuan-2016",
+      "short": "袁著",
+      "title": "中国传统音乐概论",
+      "author": "袁静芳 主编",
+      "publisher": "上海音乐出版社",
+      "year": 2016,
+      "edition": "修订版",
+      "lang": "zh",
+      "role": "M6 中国部分；M2 明清戏曲与曲艺的形态依据",
+      "structure": "上下两篇 8 章：民间歌曲 / 说唱 / 戏曲 / 民族器乐 等",
+      "limits": "偏形态分类，历史脉络需与杨著互补"
+    },
+    {
+      "id": "wu-2011",
+      "short": "伍著",
+      "title": "民族音乐学概论（增订版）",
+      "author": "伍国栋",
+      "publisher": "人民音乐出版社",
+      "year": 2011,
+      "edition": "增订版",
+      "lang": "zh",
+      "role": "M6 方法论：田野、乐种、文化语境的分析框架",
+      "structure": "七章：学科史 / 研究对象 / 田野方法 / 音乐与文化 等",
+      "limits": "方法论著作，不含区域音乐志的具体材料"
+    },
+    {
+      "id": "li-2008",
+      "short": "李著",
+      "title": "基本乐理通用教材",
+      "author": "李重光",
+      "publisher": "高等教育出版社",
+      "year": 2008,
+      "edition": "第 1 版",
+      "lang": "zh",
+      "role": "M3 阶段一、二：音高、记谱、音程、调式",
+      "structure": "16 讲",
+      "limits": "无谱例音频，需另配作品锚点"
+    },
+    {
+      "id": "sokolov-1950",
+      "short": "斯著",
+      "title": "和声学教程",
+      "author": "斯波索宾 等",
+      "publisher": "人民音乐出版社",
+      "year": 2000,
+      "edition": "修订版",
+      "lang": "zh",
+      "role": "M3 阶段三：功能和声体系",
+      "structure": "绪论 + 44 章以上（扫描本无目录页，章目由正文标题与谱例编号推定）",
+      "limits": "章目为推定，写入正文时须以实际页面复核"
+    },
+    {
+      "id": "wu-2004",
+      "short": "吴著",
+      "title": "曲式与作品分析（第二版）",
+      "author": "吴祖强",
+      "publisher": "人民音乐出版社",
+      "year": 2003,
+      "edition": "第 2 版",
+      "lang": "zh",
+      "role": "M3 阶段四；M5 结构分析的术语来源",
+      "structure": "十二章：乐段 / 二部 / 三部 / 变奏 / 回旋 / 奏鸣 / 套曲 等",
+      "limits": "以西方共性写作时期作品为主"
+    },
+    {
+      "id": "copland-1984",
+      "short": "科普兰",
+      "title": "怎样欣赏音乐",
+      "author": "艾伦·科普兰",
+      "publisher": "人民音乐出版社",
+      "year": 1984,
+      "edition": "第 1 版",
+      "lang": "zh",
+      "role": "M5 聆听方法；M3 音色与织体的听感入口",
+      "structure": "11 章：听的三层次 / 音乐的四个要素 / 曲式 等",
+      "limits": "面向普通听众，术语不系统"
+    }
+  ],
+  "external": [
+    {
+      "id": "external",
+      "title": "外部权威来源",
+      "note": "仅用于 10 部指定书目明确不覆盖的领域（古代近东与埃及、非欧民族音乐、流行音乐史、中国 1949 年后）。取源限定：大学出版社、音乐院校学报、专业音乐机构、考古报告、权威工具书（Grove / MGG / 中国大百科全书·音乐舞蹈卷）。每条须在 sources 中单列并注明核验状态。"
+    }
+  ]
+}

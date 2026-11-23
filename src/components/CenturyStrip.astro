@@ -1,0 +1,102 @@
+---
+import timeline from '../data/timeline.json';
+
+// 世纪带：每 100 年一个桶，柱高 = 该世纪收录的事件数。
+// 它不承担叙事，只提示「哪一段我们讲得最密」——真正的阅读在正文里。
+const nodes = timeline.nodes as any[];
+const MIN = -1200;
+const MAX = 2060;
+const STEP = 100;
+
+const W = 1080;
+const PAD_L = 74;
+const PAD_R = 16;
+const laneH = 46;
+const gap = 8;
+const H = 3 * (laneH + gap) + 34;
+
+const lanes = [
+  { key: 'west', label: '西方', regions: ['europe'], color: 'var(--ink)', op: 0.76 },
+  { key: 'china', label: '中国', regions: ['china'], color: 'var(--red)', op: 0.8 },
+  {
+    key: 'other',
+    label: '其他文明',
+    regions: ['india', 'arab', 'africa', 'east-asia', 'se-asia', 'central-asia', 'americas'],
+    color: 'var(--bronze)',
+    op: 0.75,
+  },
+];
+
+const xOf = (y: number) => PAD_L + ((y - MIN) / (MAX - MIN)) * (W - PAD_L - PAD_R);
+const starts: number[] = [];
+for (let y = Math.ceil(MIN / STEP) * STEP; y < MAX; y += STEP) starts.push(y);
+
+const series = lanes.map((l) => ({
+  ...l,
+  counts: starts.map(
+    (y) => nodes.filter((n) => l.regions.includes(n.region) && n.year >= y && n.year < y + STEP).length
+  ),
+}));
+
+const ticks = [-1000, -500, 1, 500, 1000, 1500, 2000];
+const tickLabel = (y: number) => (y < 0 ? '前' + Math.abs(y) : y === 1 ? '公元' : String(y));
+---
+
+<div class="strip" role="img" aria-label="公元前 1000 年至公元 2000 年间各文明条目在时间轴上的分布密度">
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMinYMin meet">
+    <defs>
+      <pattern id="hatch" width="4" height="4" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="0" x2="0" y2="4" stroke="rgba(58,46,38,.16)" stroke-width="1" />
+      </pattern>
+    </defs>
+
+    {
+      ticks.map((t) => (
+        <>
+          <line x1={xOf(t)} y1="4" x2={xOf(t)} y2={H - 22} stroke="rgba(58,46,38,.1)" stroke-width="1" />
+          <text class="tl-axis" x={xOf(t)} y={H - 6} text-anchor="middle">
+            {tickLabel(t)}
+          </text>
+        </>
+      ))
+    }
+
+    {
+      series.map((l, li) => {
+        const baseY = 14 + li * (laneH + gap);
+        return (
+          <>
+            <text class="tl-lane" x="0" y={baseY + 26}>
+              {l.label}
+            </text>
+            <line
+              x1={PAD_L}
+              y1={baseY + laneH}
+              x2={W - PAD_R}
+              y2={baseY + laneH}
+              stroke="rgba(58,46,38,.16)"
+              stroke-width="1"
+            />
+            {l.counts.map((c, i) => {
+              const h = Math.min(laneH - 6, 5 + c * 6);
+              const x0 = xOf(starts[i]);
+              const w = Math.max(2, xOf(starts[i] + STEP) - x0 - 3);
+              return (
+                <rect
+                  x={x0 + 1.5}
+                  y={baseY + laneH - (c === 0 ? 1 : h)}
+                  width={c === 0 ? 3 : w}
+                  height={c === 0 ? 1 : h}
+                  fill={l.color}
+                  opacity={c === 0 ? 0.22 : l.op}
+                >
+                  <title>{`${starts[i] > 0 ? starts[i] : '前' + Math.abs(starts[i])}—${starts[i] + STEP - 1}：${c} 条`}</title>
+                </rect>
+              );
+            })}
+          </>
+        );
+      })
+    }
+  </svg>
+</div>

@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="搜索" description="全站全文搜索">
+  <div class="search-wrap">
+    <h1>搜索</h1>
+    <input id="q" type="search" placeholder="输入词，如「圣咏」「编钟」「奏鸣曲式」" autocomplete="off" autofocus />
+    <div class="search-meta" id="meta">标题权重最高，其次是提要，再次是正文。</div>
+    <ul class="hits" id="hits"></ul>
+    <div class="empty" id="hint">
+      也可以试试：<a href={`${import.meta.env.BASE_URL}read/m1-09-chant`}>格里高利圣咏</a> ·
+      <a href={`${import.meta.env.BASE_URL}read/m2-03-liyue`}>西周礼乐</a> ·
+      <a href={`${import.meta.env.BASE_URL}read/m1-32-sonata`}>奏鸣曲式</a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('q');
+      var hits = document.getElementById('hits');
+      var meta = document.getElementById('meta');
+      var hint = document.getElementById('hint');
+      var docs = null;
+      var loading = false;
+
+      function load() {
+        if (docs || loading) return;
+        loading = true;
+        fetch(window.__BASE + 'search-index.json')
+          .then(function (r) { return r.json(); })
+          .then(function (d) { docs = d; if (input.value.trim()) run(); })
+          .catch(function () { meta.textContent = '索引加载失败。'; });
+      }
+
+      function esc(s) {
+        return s.replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+
+      function snip(text, terms) {
+        var low = text.toLowerCase();
+        var at = -1;
+        for (var i = 0; i < terms.length; i++) {
+          var p = low.indexOf(terms[i].toLowerCase());
+          if (p >= 0 && (at < 0 || p < at)) at = p;
+        }
+        if (at < 0) return '';
+        var s = Math.max(0, at - 36);
+        var e = Math.min(text.length, at + 96);
+        var out = esc(text.slice(s, e));
+        terms.forEach(function (t) {
+          if (!t) return;
+          var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+          out = out.replace(re, '<mark>$1</mark>');
+        });
+        return (s > 0 ? '…' : '') + out + (e < text.length ? '…' : '');
+      }
+
+      function run() {
+        var q = input.value.trim();
+        if (!q) { hits.innerHTML = ''; hint.style.display = ''; meta.textContent = '标题权重最高，其次是提要，再次是正文。'; return; }
+        hint.style.display = 'none';
+        var terms = q.split(/\s+/).filter(Boolean);
+        var res = [];
+        docs.forEach(function (d) {
+          var score = 0;
+          var tLow = d.title.toLowerCase();
+          var sLow = d.summary.toLowerCase();
+          var bLow = d.text.toLowerCase();
+          var all = true;
+          terms.forEach(function (t) {
+            var tl = t.toLowerCase();
+            var hit = false;
+            if (tLow.indexOf(tl) >= 0) { score += 12; hit = true; }
+            if (d.subtitle && d.subtitle.toLowerCase().indexOf(tl) >= 0) { score += 6; hit = true; }
+            if (sLow.indexOf(tl) >= 0) { score += 5; hit = true; }
+            var occ = bLow.split(tl).length - 1;
+            if (occ > 0) { score += Math.min(8, occ); hit = true; }
+            if (!hit) all = false;
+          });
+          if (all && score > 0) res.push({ d: d, score: score });
+        });
+        res.sort(function (a, b) { return b.score - a.score; });
+        meta.textContent = res.length ? '找到 ' + res.length + ' 章' : '没有匹配的章节';
+        hits.innerHTML = '';
+        if (!res.length) {
+          hits.innerHTML = '<li class="empty">换个更短的词试试，例如只输入「圣咏」或「编钟」。人名与作品名也可以直接搜。</li>';
+          return;
+        }
+        res.slice(0, 20).forEach(function (r) {
+          var li = document.createElement('li');
+          var s = snip(r.d.text, terms) || esc(r.d.summary);
+          li.innerHTML =
+            '<div class="h-mod">' + esc(r.d.moduleTitle) + ' · ' + r.d.minutes + ' 分钟</div>' +
+            '<div class="h-t"><a href="' + window.__BASE + 'read/' + r.d.slug + '">' + esc(r.d.title) + '</a></div>' +
+            '<div class="h-s">' + s + '</div>';
+          hits.appendChild(li);
+        });
+      }
+
+      input.addEventListener('focus', load);
+      input.addEventListener('input', function () { if (!docs) { load(); } else { run(); } });
+
+      var p = new URLSearchParams(location.search).get('q');
+      if (p) { input.value = p; load(); }
+    })();
+  </script>
+</Base>

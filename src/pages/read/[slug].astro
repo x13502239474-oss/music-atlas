@@ -1,0 +1,255 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { allChapters, moduleOf, neighbours, fmtEra, bookShort } from '../../lib/site';
+import glossary from '../../data/glossary.json';
+
+export async function getStaticPaths() {
+  const all = await allChapters();
+  return all.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content, headings } = await render(entry);
+const { prev, next } = await neighbours(d.slug);
+const mod = moduleOf(d.module);
+
+// 关联章节：frontmatter 用短编号（如 m1-04），需解析到已落地的真实 slug。
+// 未落地的章节显示为「待写」，不生成死链。
+const catalog = await allChapters();
+function resolveRelated(ref: string) {
+  const exact = catalog.find((c) => c.data.slug === ref);
+  if (exact) return { slug: exact.data.slug, title: exact.data.title, ready: true };
+  const prefix = catalog.find((c) => c.data.slug.startsWith(ref + '-') || c.data.slug === ref);
+  if (prefix) return { slug: prefix.data.slug, title: prefix.data.title, ready: true };
+  return { slug: ref, title: null, ready: false };
+}
+const related = d.related.map(resolveRelated);
+
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const termDefs = glossary.terms.filter((t) => d.terms.includes(t.id));
+const pending = d.verify.filter((v) => v.status !== 'verified');
+
+const stat = [
+  { k: '所属', v: `${mod.title} · 第${d.part}篇` },
+  { k: '年代', v: fmtEra(d.era.start, d.era.end) },
+  { k: '章号', v: `第 ${d.order} 章` },
+];
+---
+
+<Base title={d.title} description={d.summary}>
+  <div class="progress" id="progress"></div>
+
+  <div class="article-grid">
+    <!-- 左：目录 -->
+    <aside class="toc" id="toc">
+      <div class="kicker">Contents</div>
+      {
+        toc.map((h) => (
+          <a href={`#${h.slug}`} class={h.depth === 3 ? 'lv3' : ''} data-h={h.slug}>
+            {h.text}
+          </a>
+        ))
+      }
+      <div class="pager">
+        {prev ? <a href={`${import.meta.env.BASE_URL}read/${prev.data.slug}`}>← {prev.data.title}</a> : null}
+        {next ? <a href={`${import.meta.env.BASE_URL}read/${next.data.slug}`}>{next.data.title} →</a> : null}
+      </div>
+    </aside>
+
+    <!-- 中：正文 -->
+    <article class="article">
+      <header class="ch-head">
+        <div class="crumb">
+          <a href={`${import.meta.env.BASE_URL}modules/${mod.slug}`}>{mod.title}</a>
+          <span>/</span>第{d.part}篇 {d.partTitle}
+        </div>
+        <h1>{d.title}</h1>
+        {d.subtitle ? <p class="sub">{d.subtitle}</p> : null}
+        <div class="meta">
+          <span>约 {d.readingMinutes} 分钟</span>
+          <span class="dot">·</span>
+          <span>{d.sources.length} 部参考书</span>
+          {pending.length ? <><span class="dot">·</span><span>{pending.length} 项待核验</span></> : null}
+        </div>
+      </header>
+
+      <p class="summary">{d.summary}</p>
+
+      <div class="body" id="body">
+        <Content />
+      </div>
+
+      <footer class="ch-foot">
+        <h2>本章依据</h2>
+        <table class="src-table">
+          {d.sources.map((s) => (
+            <tr>
+              <td class="b">{bookShort(s.book)}</td>
+              <td>
+                {[s.chapter, s.section].filter(Boolean).join(' · ') || '—'}
+                {s.used_for ? <span style="display:block;opacity:.8">{s.used_for}</span> : null}
+                {s.pages ? <span style="display:block">页码：{s.pages}</span> : null}
+              </td>
+            </tr>
+          ))}
+        </table>
+
+        {
+          d.verify.length ? (
+            <>
+              <h2 style="margin-top:28px">待核验</h2>
+              <ul class="verify">
+                {d.verify.map((v) => (
+                  <li class={v.status}>{v.item}{v.note ? `（${v.note}）` : ''}</li>
+                ))}
+              </ul>
+            </>
+          ) : null
+        }
+
+        {
+          related.length ? (
+            <>
+              <h2 style="margin-top:34px">关联阅读</h2>
+              <div class="rel">
+                {related.map((r) => (
+                  r.ready ? (
+                    <a href={`${import.meta.env.BASE_URL}read/${r.slug}`}>
+                      <span class="k">Related</span>
+                      <span class="t">{r.title}</span>
+                    </a>
+                  ) : (
+                    <span class="rel-pending">
+                      <span class="k">待写</span>
+                      <span class="t">{r.slug}</span>
+                    </span>
+                  )
+                ))}
+              </div>
+            </>
+          ) : null
+        }
+      </footer>
+    </article>
+
+    <!-- 右：边注栏（事实与术语） -->
+    <aside class="marginalia">
+      <div class="side-title">In Brief</div>
+      {
+        stat.map((s) => (
+          <div class="side-item">
+            <b>{s.k}</b>
+            <span class="v">{s.v}</span>
+          </div>
+        ))
+      }
+      {
+        termDefs.length ? (
+          <div class="side-item">
+            <b>本章术语</b>
+            {termDefs.map((t) => (
+              <div style="margin-bottom:6px">
+                <span style="color:var(--ink)">{t.zh}</span>
+                <span style="display:block;font-size:11.5px;line-height:1.7">{t.short.slice(0, 46)}…</span>
+              </div>
+            ))}
+          </div>
+        ) : null
+      }
+      <div class="side-item">
+        <b>状态</b>
+        <span class="v">{d.status === 'published' ? '已定稿' : d.status === 'review' ? '复核中' : '初稿'}</span>
+        {d.updated ? <div style="font-family:var(--serif);font-size:11px">{d.updated}</div> : null}
+      </div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="tocBtn" aria-label="打开目录">目录</button>
+
+  <div class="readbar">
+    <button id="bm" aria-pressed="false">收藏</button>
+    <button id="top" aria-label="回到顶部">↑</button>
+  </div>
+
+  <script is:inline define:vars={{ slug: d.slug, title: d.title, module: mod.title }}>
+    (function () {
+      var body = document.getElementById('body');
+      var bar = document.getElementById('progress');
+      var links = Array.prototype.slice.call(document.querySelectorAll('#toc a[data-h]'));
+      var heads = links.map(function (a) { return document.getElementById(a.getAttribute('data-h')); });
+
+      function onScroll() {
+        var h = document.documentElement;
+        var total = h.scrollHeight - h.clientHeight;
+        var p = total > 0 ? h.scrollTop / total : 0;
+        bar.style.width = (p * 100).toFixed(2) + '%';
+
+        var y = window.scrollY + 120;
+        var idx = -1;
+        for (var i = 0; i < heads.length; i++) {
+          if (heads[i] && heads[i].offsetTop <= y) idx = i;
+        }
+        links.forEach(function (a, i) { a.classList.toggle('on', i === idx); });
+      }
+
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(function () { onScroll(); ticking = false; }); }
+      }, { passive: true });
+      onScroll();
+
+      // 阅读位置：5 秒节流写 localStorage
+      var KEY = 'atlas.pos.' + slug;
+      var last = 0;
+      function savePos(force) {
+        var now = Date.now();
+        if (!force && now - last < 5000) return;
+        last = now;
+        var h = document.documentElement;
+        var total = h.scrollHeight - h.clientHeight;
+        var ratio = total > 0 ? Math.min(1, h.scrollTop / total) : 0;
+        var store = {};
+        try { store = JSON.parse(localStorage.getItem('atlas.pos') || '{}'); } catch (e) {}
+        store[slug] = { title: title, module: module, ratio: ratio, updatedAt: now };
+        try { localStorage.setItem('atlas.pos', JSON.stringify(store)); } catch (e) {}
+      }
+      savePos(true);
+      window.addEventListener('scroll', function () { savePos(false); }, { passive: true });
+      window.addEventListener('beforeunload', function () { savePos(true); });
+
+      // 收藏
+      var bm = document.getElementById('bm');
+      function readMarks() {
+        try { return JSON.parse(localStorage.getItem('atlas.marks') || '[]'); } catch (e) { return []; }
+      }
+      function paint() {
+        var on = readMarks().some(function (m) { return m.slug === slug; });
+        bm.setAttribute('aria-pressed', on ? 'true' : 'false');
+        bm.textContent = on ? '已收藏' : '收藏';
+      }
+      bm.addEventListener('click', function () {
+        var list = readMarks();
+        var i = list.findIndex(function (m) { return m.slug === slug; });
+        if (i >= 0) list.splice(i, 1);
+        else list.unshift({ slug: slug, title: title, module: module, at: Date.now() });
+        try { localStorage.setItem('atlas.marks', JSON.stringify(list)); } catch (e) {}
+        paint();
+      });
+      paint();
+
+      document.getElementById('top').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 手机目录抽屉
+      var toc = document.getElementById('toc');
+      var btn = document.getElementById('tocBtn');
+      btn.addEventListener('click', function () { toc.classList.toggle('open'); });
+      toc.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') toc.classList.remove('open');
+      });
+    })();
+  </script>
+</Base>

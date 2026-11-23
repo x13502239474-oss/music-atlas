@@ -1,0 +1,222 @@
+---
+import Base from '../layouts/Base.astro';
+import timeline from '../data/timeline.json';
+
+const nodes = (timeline.nodes as any[]).filter((n) => n.year >= -1000).sort((a, b) => a.year - b.year);
+const MIN = -1000;
+const MAX = 2050;
+const W = 2600;
+const PAD_L = 92;
+const PAD_R = 40;
+const laneH = 78;
+const lanes = [
+  { key: 'europe', label: '欧洲', en: 'Europa' },
+  { key: 'china', label: '中国', en: 'China' },
+  { key: 'india', label: '印度', en: 'India' },
+  { key: 'arab', label: '阿拉伯', en: 'Arabia' },
+  { key: 'africa', label: '非洲', en: 'Africa' },
+];
+const H = lanes.length * laneH + 46;
+const x = (y: number) => PAD_L + ((y - MIN) / (MAX - MIN)) * (W - PAD_L - PAD_R);
+const ticks: number[] = [];
+for (let y = -1000; y <= 2000; y += 250) ticks.push(y);
+
+const regionLabel: Record<string, string> = {
+  europe: '欧洲', china: '中国', india: '印度', arab: '阿拉伯', africa: '非洲',
+  'east-asia': '东亚', 'se-asia': '东南亚', 'central-asia': '中亚', americas: '美洲',
+};
+const kindLabel: Record<string, string> = {
+  work: '作品', person: '人物', event: '事件', genre: '体裁', institution: '制度', instrument: '乐器', text: '文献',
+};
+const total = (timeline.nodes as any[]).length;
+const pending = (timeline.nodes as any[]).filter((n) => n.verify !== 'verified').length;
+---
+
+<Base title="时间轴" description="跨文明的音乐史对照时间轴">
+  <div class="tl-wrap">
+    <div class="tl-head">
+      <h1>世界音乐文明对照时间轴</h1>
+      <p>
+        {total} 条节点，横轴为公元纪年。同一竖线上出现的事，只表示<b>同时存在</b>，不表示互相影响——
+        除有文献支撑处，本站不画因果箭头。半透明的节点是「年份待核」的条目，可以关掉。
+      </p>
+    </div>
+
+    <div class="tl-controls">
+      <button class="chip" id="togglePending" aria-pressed="false">隐藏待核节点（{pending}）</button>
+      <button class="chip" id="toNow" aria-pressed="false">跳到公元 1000 年</button>
+      <span class="note-inline">
+        <input type="range" id="yearRange" min={MIN} max={MAX} step="10" value="700" style="width:200px;vertical-align:middle" />
+        <span id="yearOut" style="font-family:var(--serif);font-size:15px;color:var(--ink);margin-left:8px">700</span>
+      </span>
+    </div>
+
+    <div class="tl-scroll" id="tlScroll">
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+        {
+          ticks.map((t) => (
+            <>
+              <line x1={x(t)} y1="18" x2={x(t)} y2={H - 26} stroke="rgba(58,46,38,.09)" stroke-width="1" />
+              <text class="tl-axis" x={x(t)} y={H - 8} text-anchor="middle">
+                {t < 0 ? '前' + Math.abs(t) : t === 0 ? '公元' : t}
+              </text>
+            </>
+          ))
+        }
+        <line id="cursor" x1={x(700)} y1="12" x2={x(700)} y2={H - 26} stroke="var(--red)" stroke-width="1" opacity=".55" />
+
+        {
+          lanes.map((l, li) => {
+            const baseY = 26 + li * laneH + laneH / 2;
+            return (
+              <>
+                <text class="tl-lane" x="0" y={baseY - 4}>{l.label}</text>
+                <text x="0" y={baseY + 12} style="font-family:var(--serif);font-size:9px;letter-spacing:.18em;fill:var(--bronze);text-transform:uppercase">{l.en}</text>
+                <line x1={PAD_L - 10} y1={baseY} x2={W - PAD_R} y2={baseY} stroke="rgba(58,46,38,.12)" stroke-width="1" />
+                {nodes
+                  .filter((n) => n.region === l.key)
+                  .map((n, i) => {
+                    const jitter = ((i % 3) - 1) * 13;
+                    return (
+                      <g class="tl-node" data-id={n.id} data-year={n.year} data-v={n.verify}>
+                        <circle
+                          cx={x(n.year)}
+                          cy={baseY + jitter}
+                          r={n.verify === 'verified' ? 4 : 3.2}
+                          fill={n.verify === 'disputed' ? 'none' : 'var(--red)'}
+                          stroke="var(--red)"
+                          stroke-width={n.verify === 'disputed' ? 1.2 : 0}
+                          opacity={n.verify === 'verified' ? 0.92 : 0.42}
+                        />
+                        <title>{`${n.year < 0 ? '前' + Math.abs(n.year) : n.year}｜${n.title}`}</title>
+                      </g>
+                    );
+                  })}
+              </>
+            );
+          })
+        }
+      </svg>
+    </div>
+
+    <div class="tl-card" id="card">
+      <div class="yr"><span id="cardYear">700</span><small id="cardSpan">公元 7 世纪前后</small></div>
+      <div class="items" id="cardItems"></div>
+    </div>
+
+    <p class="note-inline" style="margin-top:28px;line-height:2">
+      图表从公元前 1000 年起。更早的乐舞与器物（如贾湖骨笛）写在第一篇正文里，不挤进这张图。
+      节点数据见 <code>src/data/timeline.json</code>，每条都带来源与核验状态。
+    </p>
+  </div>
+
+  <script is:inline define:vars={{ NODES: nodes }}>
+    (function () {
+      var card = document.getElementById('card');
+      var items = document.getElementById('cardItems');
+      var yearEl = document.getElementById('cardYear');
+      var spanEl = document.getElementById('cardSpan');
+      var cursor = document.getElementById('cursor');
+      var range = document.getElementById('yearRange');
+      var out = document.getElementById('yearOut');
+      var kind = {
+        work: '作品', person: '人物', event: '事件', genre: '体裁',
+        institution: '制度', instrument: '乐器', text: '文献'
+      };
+      var rg = {
+        europe: '欧洲', china: '中国', india: '印度', arab: '阿拉伯',
+        africa: '非洲', 'east-asia': '东亚', 'se-asia': '东南亚',
+        'central-asia': '中亚', americas: '美洲'
+      };
+      var MIN = -1000, MAX = 2050, W = 2600, PAD_L = 92, PAD_R = 40;
+      function xpos(y) { return PAD_L + ((y - MIN) / (MAX - MIN)) * (W - PAD_L - PAD_R); }
+
+      function fmt(y) {
+        if (y < 0) return '前 ' + Math.abs(y);
+        return String(y);
+      }
+
+      function render(year, forceId) {
+        var list = NODES.filter(function (n) { return Math.abs(n.year - year) <= 40; });
+        if (forceId) {
+          var f = NODES.filter(function (n) { return n.id === forceId; });
+          list = f.concat(list.filter(function (n) { return n.id !== forceId; }));
+        }
+        yearEl.textContent = fmt(year);
+        spanEl.textContent = '± 40 年内的条目';
+        items.innerHTML = '';
+        if (!list.length) {
+          var em = document.createElement('div');
+          em.className = 'it';
+          em.innerHTML = '<div class="sm">这一年附近尚未收录节点。拖动滑杆，或直接点图上任意圆点。</div>';
+          items.appendChild(em);
+          return;
+        }
+        list.forEach(function (n) {
+          var d = document.createElement('div');
+          d.className = 'it';
+          var p = document.createElement('div');
+          p.className = 'rg';
+          p.textContent = (rg[n.region] || n.region) + ' · ' + (kind[n.kind] || n.kind) + ' · ' + fmt(n.year) + (n.approx ? '（约）' : '');
+          var t = document.createElement('div');
+          t.className = 'tt';
+          t.textContent = n.title;
+          var s = document.createElement('div');
+          s.className = 'sm';
+          s.textContent = n.summary;
+          d.appendChild(p); d.appendChild(t); d.appendChild(s);
+          if (n.links && n.links.length) {
+            var a = document.createElement('a');
+            a.href = window.__BASE + 'read/' + n.links[0];
+            a.textContent = '读这一章 →';
+            d.appendChild(a);
+          }
+          items.appendChild(d);
+        });
+      }
+
+      function moveCursor(y) {
+        cursor.setAttribute('x1', xpos(y));
+        cursor.setAttribute('x2', xpos(y));
+      }
+
+      range.addEventListener('input', function () {
+        var y = parseInt(range.value, 10);
+        out.textContent = fmt(y);
+        moveCursor(y);
+        render(y);
+      });
+
+      document.querySelectorAll('.tl-node').forEach(function (g) {
+        g.addEventListener('click', function () {
+          var y = parseInt(g.getAttribute('data-year'), 10);
+          range.value = y;
+          out.textContent = fmt(y);
+          moveCursor(y);
+          render(y, g.getAttribute('data-id'));
+        });
+      });
+
+      var tp = document.getElementById('togglePending');
+      tp.addEventListener('click', function () {
+        var on = tp.getAttribute('aria-pressed') === 'true';
+        tp.setAttribute('aria-pressed', on ? 'false' : 'true');
+        document.querySelectorAll('.tl-node[data-v="pending"], .tl-node[data-v="disputed"]').forEach(function (g) {
+          g.style.display = on ? '' : 'none';
+        });
+      });
+
+      document.getElementById('toNow').addEventListener('click', function () {
+        range.value = 1000;
+        out.textContent = '1000';
+        moveCursor(1000);
+        render(1000);
+        var sc = document.getElementById('tlScroll');
+        sc.scrollLeft = xpos(1000) - window.innerWidth / 2;
+      });
+
+      moveCursor(700);
+      render(700);
+    })();
+  </script>
+</Base>

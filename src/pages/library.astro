@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="我的" description="收藏与阅读记录">
+  <div class="lib-wrap">
+    <h1>我的</h1>
+    <p class="sub">
+      收藏、阅读位置与历史全部存在这台设备的浏览器里，不登录、不上传。
+      因此换设备或清理浏览器数据会丢失——请定期导出。
+    </p>
+
+    <div class="lib-sec">
+      <h2>收藏</h2>
+      <div id="marks"></div>
+    </div>
+
+    <div class="lib-sec">
+      <h2>阅读记录</h2>
+      <div id="hist"></div>
+    </div>
+
+    <div class="lib-actions">
+      <button id="export">导出为 JSON</button>
+      <button id="import">导入 JSON</button>
+      <button id="clear">清空全部记录</button>
+      <input type="file" id="file" accept="application/json" style="display:none" />
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      function read(k, fb) {
+        try { return JSON.parse(localStorage.getItem(k) || JSON.stringify(fb)); } catch (e) { return fb; }
+      }
+      function write(k, v) {
+        try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {}
+      }
+
+      function row(slug, title, extra, onRemove) {
+        var d = document.createElement('div');
+        d.className = 'lib-row';
+        var a = document.createElement('a');
+        a.href = window.__BASE + 'read/' + slug;
+        a.textContent = title || slug;
+        var p = document.createElement('span');
+        p.className = 'pct';
+        p.textContent = extra || '';
+        d.appendChild(a);
+        d.appendChild(p);
+        if (onRemove) {
+          var b = document.createElement('button');
+          b.textContent = '移除';
+          b.addEventListener('click', onRemove);
+          d.appendChild(b);
+        }
+        return d;
+      }
+
+      function paintMarks() {
+        var box = document.getElementById('marks');
+        var list = read('atlas.marks', []);
+        box.innerHTML = '';
+        if (!list.length) {
+          box.innerHTML = '<p class="note-inline">还没有收藏。阅读页右下角有「收藏」按钮。</p>';
+          return;
+        }
+        list.forEach(function (m) {
+          box.appendChild(row(m.slug, m.title, m.module, function () {
+            var l = read('atlas.marks', []).filter(function (x) { return x.slug !== m.slug; });
+            write('atlas.marks', l);
+            paintMarks();
+          }));
+        });
+      }
+
+      function paintHist() {
+        var box = document.getElementById('hist');
+        var store = read('atlas.pos', {});
+        var rows = Object.keys(store).map(function (k) {
+          return Object.assign({ slug: k }, store[k]);
+        }).sort(function (a, b) { return b.updatedAt - a.updatedAt; });
+        box.innerHTML = '';
+        if (!rows.length) {
+          box.innerHTML = '<p class="note-inline">还没有阅读记录。打开任意一章，位置会自动保存。</p>';
+          return;
+        }
+        rows.slice(0, 50).forEach(function (r) {
+          var d = new Date(r.updatedAt);
+          var extra = Math.round((r.ratio || 0) * 100) + '% · ' +
+            (d.getMonth() + 1) + '/' + d.getDate();
+          box.appendChild(row(r.slug, r.title, extra, function () {
+            var s = read('atlas.pos', {});
+            delete s[r.slug];
+            write('atlas.pos', s);
+            paintHist();
+          }));
+        });
+      }
+
+      document.getElementById('export').addEventListener('click', function () {
+        var data = { marks: read('atlas.marks', []), pos: read('atlas.pos', {}), at: Date.now() };
+        var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'atlas-state.json';
+        a.click();
+      });
+
+      document.getElementById('import').addEventListener('click', function () {
+        document.getElementById('file').click();
+      });
+
+      document.getElementById('file').addEventListener('change', function (e) {
+        var f = e.target.files[0];
+        if (!f) return;
+        var fr = new FileReader();
+        fr.onload = function () {
+          try {
+            var d = JSON.parse(fr.result);
+            if (d.marks) write('atlas.marks', d.marks);
+            if (d.pos) write('atlas.pos', d.pos);
+            paintMarks(); paintHist();
+          } catch (err) { alert('文件解析失败，请确认是本页导出的 JSON。'); }
+        };
+        fr.readAsText(f);
+      });
+
+      document.getElementById('clear').addEventListener('click', function () {
+        if (!confirm('将清空本机保存的收藏与阅读记录，且无法恢复。建议先导出。')) return;
+        localStorage.removeItem('atlas.marks');
+        localStorage.removeItem('atlas.pos');
+        paintMarks(); paintHist();
+      });
+
+      paintMarks();
+      paintHist();
+    })();
+  </script>
+</Base>

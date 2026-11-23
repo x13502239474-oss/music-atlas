@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import CenturyStrip from '../components/CenturyStrip.astro';
+import { allChapters, modules } from '../lib/site';
+import timeline from '../data/timeline.json';
+import books from '../data/books.json';
+
+const chapters = await allChapters();
+const built = chapters.length;
+const total = modules.reduce((s, m) => s + m.count, 0);
+const nodes = (timeline.nodes as any[]).length;
+---
+
+<Base title="音乐地图">
+  <section class="hero">
+    <div class="eyebrow">A Private Atlas of Music History</div>
+    <h1>把三千年的声音，读成一部书。</h1>
+    <p class="lede">
+      这里没有播放器，也没有打卡。只有两类东西：一条从美索不达米亚延伸到今天的西方音乐史，
+      一条不按西方分期切割的中国音乐史，以及把它们讲清楚所需要的理论、人物与作品。
+    </p>
+    <div class="stats">
+      <div><b>{built}</b>已写成章</div>
+      <div><b>{total}</b>规划章数</div>
+      <div><b>{books.books.length}</b>部参考书</div>
+      <div><b>{nodes}</b>条时间轴节点</div>
+    </div>
+
+    <CenturyStrip />
+  </section>
+
+  <section class="modules">
+    <div class="sec-head">
+      <h2>七个模块</h2>
+      <span class="la">Moduli</span>
+      <a class="more" href={import.meta.env.BASE_URL + 'modules'}>完整目录 →</a>
+    </div>
+
+    {
+      modules.map((m, i) => {
+        const n = chapters.filter((c) => c.data.module === m.id).length;
+        return (
+          <a class="mod-row" href={`${import.meta.env.BASE_URL}modules/${m.slug}`}>
+            <span class="no">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{m.title}</h3>
+              <p>{m.lead}</p>
+            </div>
+            <span class="cnt">
+              <b>{n}</b> / {m.count} 章
+            </span>
+          </a>
+        );
+      })
+    }
+  </section>
+
+  <section class="continue">
+    <div class="sec-head">
+      <h2>继续阅读</h2>
+      <span class="la">Continua</span>
+    </div>
+    <div class="cont-list" id="cont">
+      <p class="note-inline" style="padding:18px 0">尚无阅读记录。从任一章节开始，读过的地方会自动记在这里。</p>
+    </div>
+  </section>
+
+  <section class="pull">
+    <p>「音乐史不是作品清单，而是人怎样在具体的制度、信仰与技术条件下，<br />一次次重新决定『什么声音才算音乐』。」</p>
+    <div class="src">本站编写原则 · 第一章之前</div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var box = document.getElementById('cont');
+      var store = {};
+      try { store = JSON.parse(localStorage.getItem('atlas.pos') || '{}'); } catch (e) {}
+      var rows = Object.keys(store).map(function (k) {
+        return Object.assign({ slug: k }, store[k]);
+      }).sort(function (a, b) { return b.updatedAt - a.updatedAt; }).slice(0, 6);
+
+      if (!rows.length) return;
+      box.innerHTML = '';
+      rows.forEach(function (r) {
+        var a = document.createElement('a');
+        a.className = 'cont-item';
+        a.href = window.__BASE + 'read/' + r.slug;
+        var pct = Math.round((r.ratio || 0) * 100);
+        a.innerHTML = '<div class="t"></div><div class="m"></div>';
+        a.querySelector('.t').textContent = r.title || r.slug;
+        a.querySelector('.m').textContent = (r.module || '') + ' · 读到 ' + pct + '%';
+        box.appendChild(a);
+      });
+    })();
+  </script>
+</Base>

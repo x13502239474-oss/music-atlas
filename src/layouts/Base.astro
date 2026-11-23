@@ -1,0 +1,129 @@
+---
+import '../styles/global.css';
+import glossary from '../data/glossary.json';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = '世界音乐史与中国音乐史的个人阅读平台' } = Astro.props;
+const path = Astro.url.pathname;
+
+const termMap: Record<string, { zh: string; short: string; link?: string }> = {};
+for (const t of glossary.terms) termMap[t.id] = { zh: t.zh, short: t.short, link: t.link };
+
+const nav = [
+  { href: '/modules', label: '目录' },
+  { href: '/timeline', label: '时间轴' },
+  { href: '/progress', label: '进度' },
+  { href: '/search', label: '搜索' },
+  { href: '/library', label: '我的' },
+];
+const isOn = (href: string) => path === href || path.startsWith(href + '/');
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · 音乐地图</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={import.meta.env.BASE_URL + 'favicon.svg'} type="image/svg+xml" />
+    <script define:vars={{ base: import.meta.env.BASE_URL }}>window.__BASE = base;</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到正文</a>
+
+    <header class="site-header">
+      <div class="inner">
+        <a class="brand" href={import.meta.env.BASE_URL}>
+          <span class="cn">音乐地图</span>
+          <span class="la">Atlas Musicae</span>
+        </a>
+        <nav class="nav">
+          {nav.map((n) => (
+            <a href={import.meta.env.BASE_URL + n.href.slice(1)} class={isOn(n.href) ? 'on' : ''}>{n.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <div style="max-width:26em">
+          <b>关于本站</b>
+          一个私人的音乐史阅读平台。内容以十部指定参考书为研究基础，逐章标注来源与待核验项；不追求篇数，只追求每一章都值得读完。
+        </div>
+        <div>
+          <b>结构</b>
+          七大模块 · 二百五十一章<br />
+          世界音乐史 / 中国音乐史 / 理论 /<br />人物 / 鉴赏 / 民族音乐 / 现代流行
+        </div>
+        <div>
+          <b>原则</b>
+          不虚构页码与引文<br />
+          不把争议写成定论<br />
+          不写没有来源的填充内容
+        </div>
+      </div>
+    </footer>
+
+    <div id="term-pop" role="dialog" aria-live="polite"></div>
+
+    <script is:inline define:vars={{ termMap }}>
+      (function () {
+        var pop = document.getElementById('term-pop');
+        var current = null;
+        function hide() { pop.style.display = 'none'; current = null; }
+        function show(el) {
+          var id = el.getAttribute('data-term');
+          var t = termMap[id];
+          if (!t) return;
+          pop.innerHTML = '';
+          var h = document.createElement('div');
+          h.className = 'tp-t';
+          h.textContent = t.zh;
+          var d = document.createElement('div');
+          d.className = 'tp-d';
+          d.textContent = t.short;
+          pop.appendChild(h);
+          pop.appendChild(d);
+          if (t.link) {
+            var a = document.createElement('a');
+            a.className = 'tp-l';
+            a.href = window.__BASE + 'read/' + t.link;
+            a.textContent = '去相关章节 →';
+            pop.appendChild(a);
+          }
+          pop.style.display = 'block';
+          var r = el.getBoundingClientRect();
+          var top = r.bottom + window.scrollY + 8;
+          var left = r.left + window.scrollX;
+          var w = pop.offsetWidth;
+          if (left + w > window.innerWidth - 16) left = window.innerWidth - w - 16;
+          if (left < 8) left = 8;
+          pop.style.top = top + 'px';
+          pop.style.left = left + 'px';
+          current = el;
+        }
+        document.addEventListener('click', function (e) {
+          var el = e.target.closest ? e.target.closest('.term') : null;
+          if (el) { e.preventDefault(); if (current === el) { hide(); } else { show(el); } return; }
+          if (!e.target.closest('#term-pop')) hide();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') hide();
+          if (e.key === 'Enter' && document.activeElement && document.activeElement.classList.contains('term')) {
+            show(document.activeElement);
+          }
+        });
+        window.addEventListener('scroll', hide, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
