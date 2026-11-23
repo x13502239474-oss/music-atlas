@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 35,
+      "done": 39,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -239,12 +239,12 @@
             41
           ],
           "count": 7,
-          "done": 1,
+          "done": 5,
           "chapters": [
             {
               "order": 35,
-              "slug": null,
-              "title": null
+              "slug": "m1-35-revolution",
+              "title": "「自由艺术家」是怎么被革命逼出来的"
             },
             {
               "order": 36,
@@ -253,18 +253,18 @@
             },
             {
               "order": 37,
-              "slug": null,
-              "title": null
+              "slug": "m1-37-romantic-form",
+              "title": "古典的壳，装不下浪漫主义的魂"
             },
             {
               "order": 38,
-              "slug": null,
-              "title": null
+              "slug": "m1-38-opera-early",
+              "title": "歌剧变成工业：巴黎、米兰与柏林的三条路"
             },
             {
               "order": 39,
-              "slug": null,
-              "title": null
+              "slug": "m1-39-verdi-wagner",
+              "title": "威尔第与瓦格纳：两种歌剧现代性"
             },
             {
               "order": 40,
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 27,
+      "done": 31,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -534,7 +534,7 @@
             34
           ],
           "count": 8,
-          "done": 5,
+          "done": 8,
           "chapters": [
             {
               "order": 27,
@@ -563,18 +563,18 @@
             },
             {
               "order": 32,
-              "slug": null,
-              "title": null
+              "slug": "m2-32-yuan-zaju",
+              "title": "元杂剧：一折一套，一人唱尽一台戏"
             },
             {
               "order": 33,
-              "slug": null,
-              "title": null
+              "slug": "m2-33-sanqu",
+              "title": "元散曲：标着曲牌，却听不见的歌"
             },
             {
               "order": 34,
-              "slug": null,
-              "title": null
+              "slug": "m2-34-yueqi",
+              "title": "宋元乐器：弓弦登场，器乐自立"
             }
           ]
         },
@@ -585,12 +585,12 @@
             46
           ],
           "count": 12,
-          "done": 1,
+          "done": 2,
           "chapters": [
             {
               "order": 35,
-              "slug": null,
-              "title": null
+              "slug": "m2-35-yayue",
+              "title": "宋代雅乐：为了一根律管吵了三百年"
             },
             {
               "order": 36,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 62
+  "grandDone": 70
 }
