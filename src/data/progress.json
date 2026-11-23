@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 31,
+      "done": 35,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -203,17 +203,17 @@
             34
           ],
           "count": 5,
-          "done": 1,
+          "done": 5,
           "chapters": [
             {
               "order": 30,
-              "slug": null,
-              "title": null
+              "slug": "m1-30-enlightenment",
+              "title": "启蒙运动没有写出一首曲子，却重排了音乐世界"
             },
             {
               "order": 31,
-              "slug": null,
-              "title": null
+              "slug": "m1-31-opera",
+              "title": "喜歌剧与格鲁克：一场关于「歌剧到底该听什么」的争夺"
             },
             {
               "order": 32,
@@ -222,13 +222,13 @@
             },
             {
               "order": 33,
-              "slug": null,
-              "title": null
+              "slug": "m1-33-classical",
+              "title": "古典风格：让音乐像说话一样清晰"
             },
             {
               "order": 34,
-              "slug": null,
-              "title": null
+              "slug": "m1-34-beethoven",
+              "title": "贝多芬：站在古典的边界上"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 23,
+      "done": 27,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -534,12 +534,12 @@
             34
           ],
           "count": 8,
-          "done": 1,
+          "done": 5,
           "chapters": [
             {
               "order": 27,
-              "slug": null,
-              "title": null
+              "slug": "m2-27-washe",
+              "title": "瓦舍：当听音乐第一次需要买票"
             },
             {
               "order": 28,
@@ -548,18 +548,18 @@
             },
             {
               "order": 29,
-              "slug": null,
-              "title": null
+              "slug": "m2-29-shuochang",
+              "title": "说唱：用曲牌讲故事，为戏曲备好了骨架"
             },
             {
               "order": 30,
-              "slug": null,
-              "title": null
+              "slug": "m2-30-zaju",
+              "title": "宋杂剧还不是戏：戏曲成形前夜的一场滑稽"
             },
             {
               "order": 31,
-              "slug": null,
-              "title": null
+              "slug": "m2-31-nanxi",
+              "title": "南戏的自由在于谁都能唱：从《琵琶记》说起"
             },
             {
               "order": 32,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 54
+  "grandDone": 62
 }
