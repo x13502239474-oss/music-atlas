@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 18,
+      "done": 24,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -106,17 +106,17 @@
             21
           ],
           "count": 7,
-          "done": 1,
+          "done": 7,
           "chapters": [
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m1-15-humanism",
+              "title": "音乐复兴古典，为什么比绘画和文学慢半拍"
             },
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m1-16-burgundy",
+              "title": "英式音响跨过海峡：三度和六度如何改写欧洲的耳朵"
             },
             {
               "order": 17,
@@ -125,23 +125,23 @@
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m1-18-madrigal",
+              "title": "牧歌：一首诗如何逼出半音"
             },
             {
               "order": 19,
-              "slug": null,
-              "title": null
+              "slug": "m1-19-reformation",
+              "title": "一句「听不懂」之后：复调如何在教堂里活下来"
             },
             {
               "order": 20,
-              "slug": null,
-              "title": null
+              "slug": "m1-20-instrumental",
+              "title": "器乐的独立：伴奏者第一次有了自己的曲目"
             },
             {
               "order": 21,
-              "slug": null,
-              "title": null
+              "slug": "m1-21-printing",
+              "title": "音乐印刷：当乐谱第一次成为商品"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 11,
+      "done": 16,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -447,32 +447,32 @@
             18
           ],
           "count": 5,
-          "done": 0,
+          "done": 5,
           "chapters": [
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m2-14-qingshang",
+              "title": "清商乐：改名背后，是音乐的重心南移"
             },
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m2-15-migration",
+              "title": "民族迁徙与音乐融合：人流对流，乐流也随之对流"
             },
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m2-16-buddhist",
+              "title": "梵呗：一套陌生的唱诵音调，如何变成了中国的声音"
             },
             {
               "order": 17,
-              "slug": null,
-              "title": null
+              "slug": "m2-17-lvxue",
+              "title": "从推律到校正：魏晋乐律为什么不再迷信更多的律数"
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m2-18-shengwu",
+              "title": "声音里没有哀乐：嵇康对中国音乐美学最锋利的一问"
             }
           ]
         },
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 29
+  "grandDone": 40
 }
