@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 12,
+      "done": 18,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -60,12 +60,12 @@
             14
           ],
           "count": 7,
-          "done": 1,
+          "done": 7,
           "chapters": [
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m1-08-church",
+              "title": "帝国之后，教会成了音乐唯一的雇主"
             },
             {
               "order": 9,
@@ -74,28 +74,28 @@
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m1-10-tropes",
+              "title": "越神圣，越被改写"
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m1-11-notation",
+              "title": "把音乐写下来，就改变了音乐本身"
             },
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m1-12-secular",
+              "title": "城堡大厅里的歌：爱情第一次成为被歌唱的对象"
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m1-13-polyphony",
+              "title": "复调不是发明出来的，是叠出来的"
             },
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m1-14-arsnova",
+              "title": "新艺术：一场从记谱法开始的革命"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 6,
+      "done": 11,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -406,7 +406,7 @@
             13
           ],
           "count": 6,
-          "done": 1,
+          "done": 6,
           "chapters": [
             {
               "order": 8,
@@ -415,28 +415,28 @@
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m2-09-xianghe",
+              "title": "相和歌：一声清唱，怎样被加码成一场大曲"
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m2-10-guchui",
+              "title": "鼓吹乐：一套可以赏赐出去的声音规格"
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m2-11-baixi",
+              "title": "百戏：杂技、幻术与歌舞，谁在给谁伴奏"
             },
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m2-12-silkroad",
+              "title": "丝绸之路上的音乐：张骞带回的那支曲子，可能并不存在"
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m2-13-lvxue",
+              "title": "十二律为什么转不回黄钟：三分损益算不到头的那个缺口"
             }
           ]
         },
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 18
+  "grandDone": 29
 }
