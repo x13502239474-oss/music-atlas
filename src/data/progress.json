@@ -1305,7 +1305,7 @@
       "id": "M6",
       "name": "世界民族音乐",
       "total": 36,
-      "done": 15,
+      "done": 22,
       "parts": [
         {
           "name": "民族音乐学方法",
@@ -1422,27 +1422,27 @@
             19
           ],
           "count": 4,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m6-16-maqam",
+              "title": "\"马卡姆：调式、套曲与即兴\""
             },
             {
               "order": 17,
-              "slug": null,
-              "title": null
+              "slug": "m6-17-oud",
+              "title": "\"乌德琴与阿拉伯乐器世界\""
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m6-18-chant",
+              "title": "\"古兰经吟诵：当声音服从经文\""
             },
             {
               "order": 19,
-              "slug": null,
-              "title": null
+              "slug": "m6-19-society",
+              "title": "\"音乐在社会中做什么：婚礼、咖啡馆与舞台\""
             }
           ]
         },
@@ -1453,22 +1453,22 @@
             23
           ],
           "count": 4,
-          "done": 0,
+          "done": 3,
           "chapters": [
             {
               "order": 20,
-              "slug": null,
-              "title": null
+              "slug": "m6-20-community",
+              "title": "\"撒哈拉以南非洲：音乐与社群生活\""
             },
             {
               "order": 21,
-              "slug": null,
-              "title": null
+              "slug": "m6-21-rhythm",
+              "title": "\"节奏作为组织原则\""
             },
             {
               "order": 22,
-              "slug": null,
-              "title": null
+              "slug": "m6-22-instruments",
+              "title": "\"非洲乐器：从姆比拉到鼓\""
             },
             {
               "order": 23,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 165
+  "grandDone": 172
 }

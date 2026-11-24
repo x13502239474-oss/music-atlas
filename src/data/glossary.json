@@ -1932,6 +1932,48 @@
       "latin": "muqam",
       "short": "中亚与中国新疆的大型套曲传统，含器乐、歌舞与歌曲的多段组合。",
       "link": "m6-16"
+    },
+    {
+      "id": "qanun",
+      "zh": "卡侬琴",
+      "latin": "qānūn",
+      "short": "阿拉伯世界的梯形拨弦乐器，多弦、可微调音高，是马卡姆合奏的重要成员。",
+      "link": "m6-17"
+    },
+    {
+      "id": "darbuka",
+      "zh": "达布卡鼓",
+      "latin": "darbuka",
+      "short": "阿拉伯与土耳其地区的高脚杯形鼓，是婚礼与节庆节奏的核心乐器。",
+      "link": "m6-18"
+    },
+    {
+      "id": "call-response",
+      "zh": "呼应唱法",
+      "latin": "call and response",
+      "short": "领唱与合唱交替应答的演唱方式，广泛存在于非洲及其散居地的音乐中。",
+      "link": "m6-20"
+    },
+    {
+      "id": "polyrhythm",
+      "zh": "复合节奏",
+      "latin": "polyrhythm",
+      "short": "多种不同节拍或重音模式同时进行，是撒哈拉以南非洲音乐的重要特征。",
+      "link": "m6-21"
+    },
+    {
+      "id": "mbira",
+      "zh": "姆比拉",
+      "latin": "mbira",
+      "short": "非洲的拇指琴，金属或竹制簧片装于共鸣板上，常用于仪式与社交场合。",
+      "link": "m6-22"
+    },
+    {
+      "id": "talking-drum",
+      "zh": "话鼓",
+      "latin": "talking drum",
+      "short": "可通过改变张力模拟语言声调的鼓，用于传递信息与赞颂。",
+      "link": "m6-21"
     }
   ]
 }
