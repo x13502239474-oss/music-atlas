@@ -1568,6 +1568,83 @@
       "latin": "chromatic",
       "short": "在自然音阶之外加入的升降音，带来半音进行与色彩变化。",
       "link": "m3-13"
+    },
+    {
+      "id": "harmony",
+      "zh": "和声",
+      "latin": "harmony",
+      "short": "多个音纵向结合及其连接的逻辑，研究音如何同时发声并前后相续。",
+      "link": "m3-16"
+    },
+    {
+      "id": "function",
+      "zh": "和声功能",
+      "latin": "function",
+      "short": "和弦在主调中的角色，分主(T)、属(D)、下属(S)三类，构成功能圈。",
+      "link": "m3-17"
+    },
+    {
+      "id": "cadence",
+      "zh": "终止式",
+      "latin": "cadence",
+      "short": "乐句或乐章结尾的和声进行，用不同和弦组合制造稳定或不稳定的收束感。",
+      "link": "m3-17"
+    },
+    {
+      "id": "nonchord-tone",
+      "zh": "和弦外音",
+      "latin": "nonchord tone",
+      "short": "不属于当前和弦的音，含经过音、辅助音、延留音、先现音与倚音。",
+      "link": "m3-18"
+    },
+    {
+      "id": "suspension",
+      "zh": "延留音",
+      "latin": "suspension",
+      "short": "前和弦的音延续到后和弦成为不协和音，随后下行解决的用法。",
+      "link": "m3-18"
+    },
+    {
+      "id": "subdominant",
+      "zh": "副三和弦",
+      "latin": "",
+      "short": "建立在调式二级、三级、六级、七级上的和弦，色彩不同于正三和弦。",
+      "link": "m3-19"
+    },
+    {
+      "id": "secondary-dominant",
+      "zh": "副属和弦",
+      "latin": "secondary dominant",
+      "short": "临时把某和弦当作主和弦而加于其前的属和弦，造成短暂离调。",
+      "link": "m3-19"
+    },
+    {
+      "id": "sequence",
+      "zh": "模进",
+      "latin": "sequence",
+      "short": "把同一音高或和声进行移位重复的手法，是转调与发展乐思的常用手段。",
+      "link": "m3-20"
+    },
+    {
+      "id": "altered-chord",
+      "zh": "变和弦",
+      "latin": "altered chord",
+      "short": "把和弦的某些音升高或降低而改变其色彩与倾向的和弦。",
+      "link": "m3-21"
+    },
+    {
+      "id": "counterpoint",
+      "zh": "对位",
+      "latin": "counterpoint",
+      "short": "把两条以上独立旋律按一定规则叠置的技术，与和声的主调思维相对。",
+      "link": "m3-22"
+    },
+    {
+      "id": "canon",
+      "zh": "卡农",
+      "latin": "canon",
+      "short": "各声部先后进入、模仿同一旋律的复调形式。",
+      "link": "m3-22"
     }
   ]
 }

@@ -762,7 +762,7 @@
       "id": "M3",
       "name": "音乐理论",
       "total": 34,
-      "done": 12,
+      "done": 21,
       "parts": [
         {
           "name": "阶段一 音乐基础",
@@ -807,7 +807,7 @@
             15
           ],
           "count": 10,
-          "done": 7,
+          "done": 10,
           "chapters": [
             {
               "order": 6,
@@ -846,18 +846,18 @@
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m3-13-chromatic",
+              "title": "调式变音与半音音阶"
             },
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m3-14-transpose",
+              "title": "移调"
             },
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m3-15-melody",
+              "title": "旋律的基础"
             }
           ]
         },
@@ -868,37 +868,37 @@
             22
           ],
           "count": 7,
-          "done": 0,
+          "done": 6,
           "chapters": [
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m3-16-harmony",
+              "title": "\"和声是什么\""
             },
             {
               "order": 17,
-              "slug": null,
-              "title": null
+              "slug": "m3-17-function",
+              "title": "\"正三和弦与和声功能\""
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m3-18-nonchord",
+              "title": "\"和弦外音\""
             },
             {
               "order": 19,
-              "slug": null,
-              "title": null
+              "slug": "m3-19-subchord",
+              "title": "\"副三和弦与副属和弦\""
             },
             {
               "order": 20,
-              "slug": null,
-              "title": null
+              "slug": "m3-20-modulation-sequence",
+              "title": "\"转调与模进\""
             },
             {
               "order": 21,
-              "slug": null,
-              "title": null
+              "slug": "m3-21-altered",
+              "title": "\"变和弦与等音转调\""
             },
             {
               "order": 22,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 112
+  "grandDone": 121
 }
