@@ -1592,7 +1592,7 @@
       "id": "M7",
       "name": "现代与流行音乐",
       "total": 18,
-      "done": 0,
+      "done": 9,
       "parts": [
         {
           "name": "流派史",
@@ -1601,52 +1601,52 @@
             14
           ],
           "count": 14,
-          "done": 0,
+          "done": 9,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m7-01-blues",
+              "title": "布鲁斯：从田野到唱片"
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m7-02-jazz-birth",
+              "title": "爵士乐的诞生与摇摆时代"
             },
             {
               "order": 3,
-              "slug": null,
-              "title": null
+              "slug": "m7-03-bebop",
+              "title": "比波普到自由爵士"
             },
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m7-04-gospel-soul",
+              "title": "从教堂到榜单：福音与灵魂乐"
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m7-05-rock",
+              "title": "插上电之后：摇滚乐的兴起"
             },
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m7-06-punk",
+              "title": "三个和弦之后：朋克与另类"
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m7-07-metal",
+              "title": "重金属与硬摇滚：把音量变成内容"
             },
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m7-08-funk-disco",
+              "title": "放克与迪斯科：舞蹈怎样成为音乐的组织原则"
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m7-09-electronic",
+              "title": "电子音乐：从磁带到大卫·鲍伊"
             },
             {
               "order": 10,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 186
+  "grandDone": 195
 }
