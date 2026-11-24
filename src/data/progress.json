@@ -762,7 +762,7 @@
       "id": "M3",
       "name": "音乐理论",
       "total": 34,
-      "done": 28,
+      "done": 34,
       "parts": [
         {
           "name": "阶段一 音乐基础",
@@ -914,7 +914,7 @@
             31
           ],
           "count": 9,
-          "done": 6,
+          "done": 9,
           "chapters": [
             {
               "order": 23,
@@ -948,18 +948,18 @@
             },
             {
               "order": 29,
-              "slug": null,
-              "title": null
+              "slug": "m3-29-sonata-form",
+              "title": "\"奏鸣曲式：把调性矛盾立起来，再解决掉\""
             },
             {
               "order": 30,
-              "slug": null,
-              "title": null
+              "slug": "m3-30-suite",
+              "title": "\"套曲曲式：几个乐章怎样排成一台戏\""
             },
             {
               "order": 31,
-              "slug": null,
-              "title": null
+              "slug": "m3-31-free-form",
+              "title": "\"单乐章的混合-自由曲式\""
             }
           ]
         },
@@ -970,22 +970,22 @@
             34
           ],
           "count": 3,
-          "done": 0,
+          "done": 3,
           "chapters": [
             {
               "order": 32,
-              "slug": null,
-              "title": null
+              "slug": "m3-32-orchestration",
+              "title": "\"配器与管弦乐\""
             },
             {
               "order": 33,
-              "slug": null,
-              "title": null
+              "slug": "m3-33-modern-tech",
+              "title": "\"现代作曲技法：当调性不再自动给音乐立法\""
             },
             {
               "order": 34,
-              "slug": null,
-              "title": null
+              "slug": "m3-34-20th-theory",
+              "title": "\"20世纪音乐理论：当调性不再提供答案，分析还能问什么\""
             }
           ]
         }
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 128
+  "grandDone": 134
 }

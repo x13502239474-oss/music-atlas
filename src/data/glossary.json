@@ -1722,6 +1722,20 @@
       "latin": "pitch-class set",
       "short": "把十二个音级抽象为集合、研究其结构与关系的现代音乐分析方法。",
       "link": "m3-34"
+    },
+    {
+      "id": "double-exposition",
+      "zh": "双呈示部",
+      "latin": "double exposition",
+      "short": "协奏曲奏鸣曲式中，先由乐队呈示主题、再由独奏呈示的结构，是古典协奏曲的特征。",
+      "link": "m3-29"
+    },
+    {
+      "id": "sonata-rondo",
+      "zh": "回旋奏鸣曲式",
+      "latin": "sonata-rondo",
+      "short": "兼有回旋曲式主题反复与奏鸣曲式调性冲突的单乐章结构，常见于古典协奏曲末乐章。",
+      "link": "m3-29"
     }
   ]
 }
