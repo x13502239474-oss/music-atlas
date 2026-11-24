@@ -1645,6 +1645,83 @@
       "latin": "canon",
       "short": "各声部先后进入、模仿同一旋律的复调形式。",
       "link": "m3-22"
+    },
+    {
+      "id": "form",
+      "zh": "曲式",
+      "latin": "form",
+      "short": "音乐作品的结构布局，指乐思如何被安排成段落与整体，不等于内容或形式美。",
+      "link": "m3-23"
+    },
+    {
+      "id": "motif",
+      "zh": "动机",
+      "latin": "motif",
+      "short": "音乐中最短的可辨认音高与节奏单元，是乐思发展的种子。",
+      "link": "m3-25"
+    },
+    {
+      "id": "phrase",
+      "zh": "乐句",
+      "latin": "phrase",
+      "short": "由若干乐节构成、有相对完整呼吸与终止的相对独立单位。",
+      "link": "m3-25"
+    },
+    {
+      "id": "period-form",
+      "zh": "乐段",
+      "latin": "period",
+      "short": "由两个以上乐句构成、以终止式收束的最小完整曲式单位。",
+      "link": "m3-25"
+    },
+    {
+      "id": "binary",
+      "zh": "二部曲式",
+      "latin": "binary form",
+      "short": "由两个相对完整部分构成的曲式，两部分调性与材料形成对比。",
+      "link": "m3-26"
+    },
+    {
+      "id": "ternary",
+      "zh": "三部曲式",
+      "latin": "ternary form",
+      "short": "A-B-A 结构，第三部分再现第一部分，兼具对比与回归。",
+      "link": "m3-26"
+    },
+    {
+      "id": "rondo",
+      "zh": "回旋曲式",
+      "latin": "rondo",
+      "short": "主题反复出现、其间插入对比段落的曲式，主部与插部交替。",
+      "link": "m3-28"
+    },
+    {
+      "id": "variation",
+      "zh": "变奏曲式",
+      "latin": "variation form",
+      "short": "以主题为基础、连续多次变化重复而成的曲式。",
+      "link": "m3-28"
+    },
+    {
+      "id": "suite",
+      "zh": "套曲",
+      "latin": "suite",
+      "short": "由若干相对独立的乐章或舞曲组成的 larger 结构，如古组曲与奏鸣-交响套曲。",
+      "link": "m3-30"
+    },
+    {
+      "id": "orchestration-2",
+      "zh": "乐器法",
+      "latin": "instrumentation",
+      "short": "研究各乐器的音域、音色与演奏可能性的知识，是配器的基础。",
+      "link": "m3-32"
+    },
+    {
+      "id": "set-theory",
+      "zh": "音级集合",
+      "latin": "pitch-class set",
+      "short": "把十二个音级抽象为集合、研究其结构与关系的现代音乐分析方法。",
+      "link": "m3-34"
     }
   ]
 }
