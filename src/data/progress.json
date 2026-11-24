@@ -762,7 +762,7 @@
       "id": "M3",
       "name": "音乐理论",
       "total": 34,
-      "done": 4,
+      "done": 12,
       "parts": [
         {
           "name": "阶段一 音乐基础",
@@ -771,7 +771,7 @@
             5
           ],
           "count": 5,
-          "done": 4,
+          "done": 5,
           "chapters": [
             {
               "order": 1,
@@ -795,8 +795,8 @@
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m3-05-tempo",
+              "title": "\"速度与力度\""
             }
           ]
         },
@@ -807,42 +807,42 @@
             15
           ],
           "count": 10,
-          "done": 0,
+          "done": 7,
           "chapters": [
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m3-06-interval",
+              "title": "\"音程\""
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m3-07-chord",
+              "title": "\"和弦\""
             },
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m3-08-key",
+              "title": "\"调与调关系：谱号后面那两个升号到底在说什么\""
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m3-09-mode",
+              "title": "\"调式：同样七个白键，为什么一个像早晨、一个像黄昏\""
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m3-10-keymode",
+              "title": "\"调与调式的结合：那个让你松一口气的和弦，为什么有力量\""
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m3-11-chord-in-mode",
+              "title": "调式中的音程与和弦"
             },
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m3-12-modulation",
+              "title": "转调"
             },
             {
               "order": 13,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 104
+  "grandDone": 112
 }

@@ -1484,6 +1484,90 @@
       "latin": "melody",
       "short": "音高与节奏组织成的横向线条，是音乐最容易被记住的层面。",
       "link": "m3-15"
+    },
+    {
+      "id": "tempo-mark",
+      "zh": "速度术语",
+      "latin": "",
+      "short": "标记音乐快慢的意大利语词或数字，如 Allegro（快板）、Adagio（柔板）与每分钟拍数。",
+      "link": "m3-05"
+    },
+    {
+      "id": "dynamics-mark",
+      "zh": "力度术语",
+      "latin": "",
+      "short": "标记音乐强弱的符号，如 p（弱）、f（强）及其组合与渐强渐弱记号。",
+      "link": "m3-05"
+    },
+    {
+      "id": "inversion",
+      "zh": "音程转位",
+      "latin": "inversion",
+      "short": "把音程的下方音移高八度或上方音移低八度，原位与转位度数之和为九。",
+      "link": "m3-06"
+    },
+    {
+      "id": "consonance",
+      "zh": "协和音程",
+      "latin": "consonance",
+      "short": "听起来稳定、融合的音程，如纯一度、纯五度、大小三六度；不协和音程则需解决。",
+      "link": "m3-06"
+    },
+    {
+      "id": "triad",
+      "zh": "三和弦",
+      "latin": "triad",
+      "short": "三个音按三度叠置构成的和弦，分大、小、增、减四种。",
+      "link": "m3-07"
+    },
+    {
+      "id": "seventh-chord",
+      "zh": "七和弦",
+      "latin": "seventh chord",
+      "short": "四个音按三度叠置、含七度音的和弦，属七和弦最为常用。",
+      "link": "m3-07"
+    },
+    {
+      "id": "key-signature",
+      "zh": "调号",
+      "latin": "key signature",
+      "short": "写在谱号之后、表示调的升降记号，规定全曲哪些音需升高或降低。",
+      "link": "m3-08"
+    },
+    {
+      "id": "relative-key",
+      "zh": "关系调",
+      "latin": "relative key",
+      "short": "调号相同而主音不同的大小调，如 C 大调与 a 小调。",
+      "link": "m3-08"
+    },
+    {
+      "id": "pentatonic",
+      "zh": "五声调式",
+      "latin": "pentatonic",
+      "short": "由宫商角徵羽五个音构成的调式，是中国传统音乐音高组织的基础。",
+      "link": "m3-09"
+    },
+    {
+      "id": "tonic",
+      "zh": "主音",
+      "latin": "tonic",
+      "short": "调式的中心音，其他音围绕它组织，全曲的稳定感多建立在主音上。",
+      "link": "m3-10"
+    },
+    {
+      "id": "dominant-seventh",
+      "zh": "属七和弦",
+      "latin": "dominant seventh",
+      "short": "建立在属音上的七和弦，含三全音，倾向解决到主和弦，是功能和声的核心动力。",
+      "link": "m3-11"
+    },
+    {
+      "id": "chromatic",
+      "zh": "变化音",
+      "latin": "chromatic",
+      "short": "在自然音阶之外加入的升降音，带来半音进行与色彩变化。",
+      "link": "m3-13"
     }
   ]
 }
