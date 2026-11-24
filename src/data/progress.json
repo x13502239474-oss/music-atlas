@@ -1305,7 +1305,7 @@
       "id": "M6",
       "name": "世界民族音乐",
       "total": 36,
-      "done": 28,
+      "done": 36,
       "parts": [
         {
           "name": "民族音乐学方法",
@@ -1515,7 +1515,7 @@
             31
           ],
           "count": 4,
-          "done": 1,
+          "done": 4,
           "chapters": [
             {
               "order": 28,
@@ -1524,18 +1524,18 @@
             },
             {
               "order": 29,
-              "slug": null,
-              "title": null
+              "slug": "m6-29-khon",
+              "title": "\"孔剧：面具之下的宫廷声音\""
             },
             {
               "order": 30,
-              "slug": null,
-              "title": null
+              "slug": "m6-30-vietnam",
+              "title": "\"越南：从宫廷雅乐到才子音乐\""
             },
             {
               "order": 31,
-              "slug": null,
-              "title": null
+              "slug": "m6-31-sea-instruments",
+              "title": "\"东南亚的乐器与跨文化传播\""
             }
           ]
         },
@@ -1546,22 +1546,22 @@
             34
           ],
           "count": 3,
-          "done": 0,
+          "done": 3,
           "chapters": [
             {
               "order": 32,
-              "slug": null,
-              "title": null
+              "slug": "m6-32-muqam",
+              "title": "\"木卡姆：一部套曲怎样装下一个地域的声音\""
             },
             {
               "order": 33,
-              "slug": null,
-              "title": null
+              "slug": "m6-33-epic",
+              "title": "\"史诗演唱：一个人怎样把民族的记忆唱完\""
             },
             {
               "order": 34,
-              "slug": null,
-              "title": null
+              "slug": "m6-34-silk-instruments",
+              "title": "\"乐器的丝路之旅：传播不是一个动词就能说清的事\""
             }
           ]
         },
@@ -1572,17 +1572,17 @@
             36
           ],
           "count": 2,
-          "done": 0,
+          "done": 2,
           "chapters": [
             {
               "order": 35,
-              "slug": null,
-              "title": null
+              "slug": "m6-35-latin",
+              "title": "\"拉美与加勒比：非洲—伊比利亚的融合\""
             },
             {
               "order": 36,
-              "slug": null,
-              "title": null
+              "slug": "m6-36-son-tango",
+              "title": "\"松与探戈：从地方到世界\""
             }
           ]
         }
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 178
+  "grandDone": 186
 }

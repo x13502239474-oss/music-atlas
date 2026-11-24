@@ -28,7 +28,7 @@ const chapters = defineCollection({
     title: z.string(),
     subtitle: z.string().optional(),
     module: z.enum(['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7']),
-    part: z.number().int().min(1).max(8),
+    part: z.number().int().min(1).max(9),
     partTitle: z.string(),
     order: z.number().int().min(1),
     period: z.string(), // ancient / medieval / ... 或 preqin / qinhan ...
