@@ -1736,6 +1736,55 @@
       "latin": "sonata-rondo",
       "short": "兼有回旋曲式主题反复与奏鸣曲式调性冲突的单乐章结构，常见于古典协奏曲末乐章。",
       "link": "m3-29"
+    },
+    {
+      "id": "bach",
+      "zh": "巴赫",
+      "latin": "J. S. Bach",
+      "short": "巴洛克晚期德国作曲家，以赋格与平均律将复调推向顶峰。",
+      "link": "m4-01"
+    },
+    {
+      "id": "handel",
+      "zh": "亨德尔",
+      "latin": "G. F. Handel",
+      "short": "巴洛克晚期德裔英国作曲家，以清唱剧《弥赛亚》与歌剧闻名。",
+      "link": "m4-02"
+    },
+    {
+      "id": "vivaldi",
+      "zh": "维瓦尔第",
+      "latin": "A. Vivaldi",
+      "short": "意大利巴洛克作曲家，以《四季》协奏曲确立独奏协奏曲范式。",
+      "link": "m4-03"
+    },
+    {
+      "id": "haydn",
+      "zh": "海顿",
+      "latin": "F. J. Haydn",
+      "short": "古典主义作曲家，弦乐四重奏与交响曲体裁的奠基者之一。",
+      "link": "m4-04"
+    },
+    {
+      "id": "mozart",
+      "zh": "莫扎特",
+      "latin": "W. A. Mozart",
+      "short": "古典主义作曲家，在歌剧、协奏曲与交响曲诸体裁均有 summit 之作。",
+      "link": "m4-05"
+    },
+    {
+      "id": "beethoven",
+      "zh": "贝多芬",
+      "latin": "L. van Beethoven",
+      "short": "古典到浪漫的桥梁作曲家，以九部交响曲与奏鸣曲扩展了音乐的戏剧容量。",
+      "link": "m4-06"
+    },
+    {
+      "id": "ritornello",
+      "zh": "利都奈罗",
+      "latin": "ritornello",
+      "short": "协奏曲中乐队全奏的主题性段落，与独奏段落交替出现。",
+      "link": "m5-02"
     }
   ]
 }

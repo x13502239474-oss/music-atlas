@@ -995,7 +995,7 @@
       "id": "M4",
       "name": "作曲家与流派",
       "total": 40,
-      "done": 0,
+      "done": 6,
       "parts": [
         {
           "name": "西方作曲家",
@@ -1004,37 +1004,37 @@
             22
           ],
           "count": 22,
-          "done": 0,
+          "done": 6,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m4-01-bach",
+              "title": "巴赫：把复调推到尽头的人"
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m4-02-handel",
+              "title": "亨德尔：把巴洛克搬上市场的那个人"
             },
             {
               "order": 3,
-              "slug": null,
-              "title": null
+              "slug": "m4-03-vivaldi",
+              "title": "维瓦尔第：把「小组对全体」写成了范式"
             },
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m4-04-haydn",
+              "title": "海顿：一个乐长怎样造出体裁"
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m4-05-mozart",
+              "title": "莫扎特：把人的歌声写进乐器里"
             },
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m4-06-beethoven",
+              "title": "贝多芬：把形式撑到裂开的人"
             },
             {
               "order": 7,
@@ -1236,7 +1236,7 @@
       "id": "M5",
       "name": "作品鉴赏",
       "total": 10,
-      "done": 0,
+      "done": 2,
       "parts": [
         {
           "name": "十部经典",
@@ -1245,17 +1245,17 @@
             10
           ],
           "count": 10,
-          "done": 0,
+          "done": 2,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m5-beethoven-5",
+              "title": "\"贝多芬第五交响曲「命运」：四个音怎样撑起四个乐章\""
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m5-brandenburg",
+              "title": "\"勃兰登堡第二号协奏曲：一支高音小号与四件独奏乐器\""
             },
             {
               "order": 3,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 134
+  "grandDone": 142
 }
