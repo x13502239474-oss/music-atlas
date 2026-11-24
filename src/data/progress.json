@@ -1305,7 +1305,7 @@
       "id": "M6",
       "name": "世界民族音乐",
       "total": 36,
-      "done": 9,
+      "done": 15,
       "parts": [
         {
           "name": "民族音乐学方法",
@@ -1340,7 +1340,7 @@
             11
           ],
           "count": 8,
-          "done": 6,
+          "done": 8,
           "chapters": [
             {
               "order": 4,
@@ -1374,13 +1374,13 @@
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m6-10-minority",
+              "title": "\"少数民族民歌与歌舞：不用一把尺子量所有传统\""
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m6-11-pitch",
+              "title": "\"中国传统音乐的音高观念：从五声到口传的弹性\""
             }
           ]
         },
@@ -1391,27 +1391,27 @@
             15
           ],
           "count": 4,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m6-12-raga",
+              "title": "\"拉格：一种旋律的语法\""
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m6-13-tala",
+              "title": "\"塔拉：循环的节奏建筑\""
             },
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m6-14-sitar",
+              "title": "\"西塔尔与北印度古典传统：一件长颈琴里的整套世界观\""
             },
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m6-15-film",
+              "title": "\"印度电影音乐：当传统进入现代媒介\""
             }
           ]
         },
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 159
+  "grandDone": 165
 }
