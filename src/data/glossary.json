@@ -1260,6 +1260,90 @@
       "latin": "military band",
       "short": "近代由西方传入的管乐合奏编制，用于仪仗、集会与新式军乐演奏。",
       "link": "m2-46"
+    },
+    {
+      "id": "serialism",
+      "zh": "整体序列",
+      "latin": "total serialism",
+      "short": "把十二音序列原则扩展到节奏、力度、音色等所有参数的作曲法， postwar  avant-garde 的核心。",
+      "link": "m1-47"
+    },
+    {
+      "id": "aleatory",
+      "zh": "偶然音乐",
+      "latin": "aleatory music",
+      "short": "把演奏中的某些选择交给偶然或演奏者的作曲方式，凯奇与 Feldman 为代表。",
+      "link": "m1-47"
+    },
+    {
+      "id": "electronic",
+      "zh": "电子音乐",
+      "latin": "electronic music",
+      "short": "用电子手段产生或处理声音的音乐，含磁带音乐、具体音乐与合成器音乐等分支。",
+      "link": "m1-47"
+    },
+    {
+      "id": "musique-concrete",
+      "zh": "具体音乐",
+      "latin": "musique concrète",
+      "short": "以录制的环境声响为素材拼接、变形而成的电子音乐，谢弗创立。",
+      "link": "m1-47"
+    },
+    {
+      "id": "minimalism",
+      "zh": "极简主义",
+      "latin": "minimalism",
+      "short": "以简短动机反复、缓慢渐变与稳态音响为特征的风格，赖希、格拉斯、赖利为代表。",
+      "link": "m1-49"
+    },
+    {
+      "id": "postmodern",
+      "zh": "后现代",
+      "latin": "postmodernism",
+      "short": "20世纪后期对宏大叙事的怀疑，音乐中表现为拼贴、风格并置与历史引用。",
+      "link": "m1-49"
+    },
+    {
+      "id": "sound-installation",
+      "zh": "声音装置",
+      "latin": "sound installation",
+      "short": "以空间中的声音布置为作品形态，观众在场域中移动聆听，突破音乐会框架。",
+      "link": "m1-50"
+    },
+    {
+      "id": "yinyuejiaoyu",
+      "zh": "专业音乐教育",
+      "latin": "",
+      "short": "近代中国建立的院校式音乐人才培养体系，以上海国立音乐院等为代表。",
+      "link": "m2-48"
+    },
+    {
+      "id": "xiaoyoumei",
+      "zh": "萧友梅",
+      "latin": "",
+      "short": "中国近代作曲家与音乐教育家，上海国立音乐院创办人之一。",
+      "link": "m2-49"
+    },
+    {
+      "id": "zhao-yuanren",
+      "zh": "赵元任",
+      "latin": "",
+      "short": "语言学家兼作曲家，以艺术歌曲与《新诗歌集》探索中文声乐的语言韵律。",
+      "link": "m2-49"
+    },
+    {
+      "id": "liujinhui",
+      "zh": "刘天华",
+      "latin": "",
+      "short": "民族器乐作曲家，改良二胡并创作《良宵》等十首二胡曲，推动国乐改进。",
+      "link": "m2-49"
+    },
+    {
+      "id": "jiuwang-geyong",
+      "zh": "救亡歌咏",
+      "latin": "",
+      "short": "抗战前后以群众齐唱方式传播的民族救亡歌曲运动，聂耳、冼星海等为代表。",
+      "link": "m2-50"
     }
   ]
 }

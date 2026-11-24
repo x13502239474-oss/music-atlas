@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 45,
+      "done": 50,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -285,7 +285,7 @@
             46
           ],
           "count": 5,
-          "done": 4,
+          "done": 5,
           "chapters": [
             {
               "order": 42,
@@ -304,8 +304,8 @@
             },
             {
               "order": 45,
-              "slug": null,
-              "title": null
+              "slug": "m1-45-jazz-pop",
+              "title": "两次大战之间：爵士与流行音乐"
             },
             {
               "order": 46,
@@ -321,27 +321,27 @@
             50
           ],
           "count": 4,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 47,
-              "slug": null,
-              "title": null
+              "slug": "m1-47-postwar",
+              "title": "战后交叉潮流"
             },
             {
               "order": 48,
-              "slug": null,
-              "title": null
+              "slug": "m1-48-postwar-classical",
+              "title": "战后古典传统的继承者"
             },
             {
               "order": 49,
-              "slug": null,
-              "title": null
+              "slug": "m1-49-late20",
+              "title": "二十世纪晚期"
             },
             {
               "order": 50,
-              "slug": null,
-              "title": null
+              "slug": "m1-50-21st",
+              "title": "二十一世纪：当音乐不再需要「现场」"
             }
           ]
         }
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 41,
+      "done": 44,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -656,7 +656,7 @@
             56
           ],
           "count": 10,
-          "done": 1,
+          "done": 4,
           "chapters": [
             {
               "order": 47,
@@ -665,18 +665,18 @@
             },
             {
               "order": 48,
-              "slug": null,
-              "title": null
+              "slug": "m2-48-newmusic",
+              "title": "新音乐文化的初期建设"
             },
             {
               "order": 49,
-              "slug": null,
-              "title": null
+              "slug": "m2-49-four",
+              "title": "萧友梅、赵元任、黎锦晖、刘天华"
             },
             {
               "order": 50,
-              "slug": null,
-              "title": null
+              "slug": "m2-50-jiuwang",
+              "title": "救亡抗日时期的音乐"
             },
             {
               "order": 51,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 86
+  "grandDone": 94
 }
