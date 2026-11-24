@@ -995,7 +995,7 @@
       "id": "M4",
       "name": "作曲家与流派",
       "total": 40,
-      "done": 12,
+      "done": 18,
       "parts": [
         {
           "name": "西方作曲家",
@@ -1004,7 +1004,7 @@
             22
           ],
           "count": 22,
-          "done": 12,
+          "done": 18,
           "chapters": [
             {
               "order": 1,
@@ -1068,33 +1068,33 @@
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m4-13-verdi",
+              "title": "威尔第：让歌唱重新成为戏剧"
             },
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m4-14-tchaikovsky",
+              "title": "柴可夫斯基：把俄罗斯装进交响曲"
             },
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m4-15-dvorak",
+              "title": "德沃夏克：把家乡写进世界的形式"
             },
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m4-16-mahler",
+              "title": "马勒：把世界装进一部交响曲"
             },
             {
               "order": 17,
-              "slug": null,
-              "title": null
+              "slug": "m4-17-debussy",
+              "title": "德彪西：让和声停止「进行」"
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m4-18-ravel",
+              "title": "拉威尔：精确是一种自由"
             },
             {
               "order": 19,
@@ -1592,7 +1592,7 @@
       "id": "M7",
       "name": "现代与流行音乐",
       "total": 18,
-      "done": 16,
+      "done": 18,
       "parts": [
         {
           "name": "流派史",
@@ -1682,7 +1682,7 @@
             18
           ],
           "count": 4,
-          "done": 2,
+          "done": 4,
           "chapters": [
             {
               "order": 15,
@@ -1696,13 +1696,13 @@
             },
             {
               "order": 17,
-              "slug": null,
-              "title": null
+              "slug": "m7-17-media",
+              "title": "媒介变迁：唱片、广播、磁带、流媒体"
             },
             {
               "order": 18,
-              "slug": null,
-              "title": null
+              "slug": "m7-18-analysis",
+              "title": "怎样分析流行音乐"
             }
           ]
         }
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 202
+  "grandDone": 210
 }
