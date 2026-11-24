@@ -21,8 +21,19 @@ const catalog = await allChapters();
 function resolveRelated(ref: string) {
   const exact = catalog.find((c) => c.data.slug === ref);
   if (exact) return { slug: exact.data.slug, title: exact.data.title, ready: true };
-  const prefix = catalog.find((c) => c.data.slug.startsWith(ref + '-') || c.data.slug === ref);
+  // 短编号匹配：m1-04 -> m1-04-greek
+  const prefix = catalog.find((c) => c.data.slug.startsWith(ref + '-'));
   if (prefix) return { slug: prefix.data.slug, title: prefix.data.title, ready: true };
+  // 主题词兜底：早期章节填的预规划 slug（m6-buddhist / m4-bach）与实际落地 slug
+  // （m2-16-buddhist / m4-01-bach）模块号不同。取 ref 的主题词在全站 slug 中找，
+  // 优先同模块命中，避免这类引用显示成灰色死链。
+  const topic = ref.replace(/^m\d+-\d+-?/, '');
+  if (topic.length >= 3) {
+    const hit =
+      catalog.find((c) => c.data.module === d.module && c.data.slug.includes(topic)) ||
+      catalog.find((c) => c.data.slug.includes(topic));
+    if (hit) return { slug: hit.data.slug, title: hit.data.title, ready: true };
+  }
   return { slug: ref, title: null, ready: false };
 }
 const related = d.related.map(resolveRelated);

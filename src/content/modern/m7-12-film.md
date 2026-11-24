@@ -13,7 +13,7 @@ summary: 电影配乐是一种为别的东西服务的音乐：它要与画面�
 terms: [film-score, leitmotif, recording, electronic]
 figures: []
 works: []
-related: [m7-11, m5-tiger, copland]
+related: [m7-11, m5-crouching-tiger, m5-figaro]
 sources:
   - book: external
     section: "依据通行电影音乐研究共识（如《新格罗夫音乐与音乐家辞典》、电影音乐通史）"

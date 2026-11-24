@@ -1,7 +1,7 @@
 ---
 slug: m1-10-tropes
 title: 越神圣，越被改写
-subtitle: 附加段、继叙咏与宗教剧——圣咏如何在"不可更动"中长出第一批新创作
+subtitle: 附加段、继叙咏与宗教剧——圣咏如何在「不可更动」中长出第一批新创作
 module: M1
 part: 2
 partTitle: 中世纪

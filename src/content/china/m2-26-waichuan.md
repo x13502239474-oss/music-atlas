@@ -13,7 +13,7 @@ summary: 唐代音乐没有停在境内。它跟着遣唐使、留学生、僧�
 terms: [yanyue, jianzipu]
 figures: []
 works: []
-related: [m2-19, m2-12, m6-eastasia]
+related: [m2-19, m2-12, m6-24-gagaku]
 sources:
   - book: yang-1981
     chapter: 第五编第十章

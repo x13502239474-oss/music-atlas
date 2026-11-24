@@ -13,7 +13,7 @@ summary: "本章从印度电影里一段最常见的歌舞场景切入，讲清 
 terms: [raga, tala, recording]
 figures: []
 works: []
-related: [m6-14, m7-film, m1-50]
+related: [m6-14, m7-12-film, m1-50]
 sources:
   - book: external
     section: "通行民族音乐学共识（印度电影音乐与媒介研究）"

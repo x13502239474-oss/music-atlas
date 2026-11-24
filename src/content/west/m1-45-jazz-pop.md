@@ -13,7 +13,7 @@ summary: 留声机、广播与电影把音乐从现场搬进家庭，爵士与�
 terms: [jazz, blues, recording, neoclassicism]
 figures: []
 works: []
-related: [m1-44, m1-46, m7-jazz]
+related: [m1-44, m1-46, m7-02-jazz-birth]
 sources:
   - book: ahwm-10e
     chapter: "34"

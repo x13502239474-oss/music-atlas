@@ -13,7 +13,7 @@ summary: 巴赫与亨德尔同生于1685年，却选择了完全相反的职业�
 terms: [fugue, oratorio, cantata, basso-continuo]
 figures: []
 works: []
-related: [m1-26, m1-29, m4-bach]
+related: [m1-26, m1-29, m4-01-bach]
 sources:
   - book: ahwm-10e
     chapter: "19"

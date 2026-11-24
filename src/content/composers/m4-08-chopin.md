@@ -13,7 +13,7 @@ summary: 他离开华沙后再也没有回去，把全部才华押在钢琴上�
 terms: [chopin, nocturne, etude, character-piece, rubato]
 figures: []
 works: []
-related: [m1-36, m5-chopin-preludes, m4-09]
+related: [m1-36, m5-preludes, m4-09]
 sources:
   - book: ahwm-10e
     chapter: "25"

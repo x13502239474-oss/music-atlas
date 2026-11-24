@@ -13,7 +13,7 @@ summary: 明清是古琴的「琴派时代」：虞山派、广陵派、浙派�
 terms: [jianzipu, bayin, yuediao, gongchepu]
 figures: []
 works: []
-related: [m2-25, m2-44, m6-guqin]
+related: [m2-25, m2-44, m2-42-guqin]
 sources:
   - book: yuan-2016
     chapter: 第五章

@@ -13,7 +13,7 @@ summary: 佛教东传带来了一种中原从未听过的唱诵方式——梵�
 terms: [fanbei]
 figures: []
 works: []
-related: [m2-15, m2-17, m6-buddhist]
+related: [m2-15, m2-17, m2-16-buddhist]
 sources:
   - book: yang-1981
     chapter: 第四编第六章

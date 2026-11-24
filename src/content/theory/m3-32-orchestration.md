@@ -13,7 +13,7 @@ summary: "本章坦承参考书里没有专门的配器法教材，转而从听�
 terms: [orchestration, orchestration-2, dynamics]
 figures: []
 works: []
-related: [m3-24, m3-33, m5-listening]
+related: [m3-24, m3-33, m5-beethoven-5]
 sources:
   - book: copland-1984
     chapter: "第九至十一章"

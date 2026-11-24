@@ -13,7 +13,7 @@ summary: "本章依据吴祖强绪论后的表现手段一章，把旋律、节�
 terms: [melody, rhythm, harmony, orchestration, dynamics]
 figures: []
 works: []
-related: [m3-23, m3-25, m5-listening]
+related: [m3-23, m3-25, m5-beethoven-5]
 sources:
   - book: wu-2004
     chapter: "第二章"

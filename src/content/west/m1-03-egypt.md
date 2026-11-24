@@ -13,7 +13,7 @@ summary: 古埃及没有留下一个音符，只留下壁画里的乐师行列�
 terms: [sistrum]
 figures: []
 works: []
-related: [m1-02, m1-04, m6-africa]
+related: [m1-02, m1-04, m6-21-rhythm]
 sources:
   - book: ahwm-10e
     chapter: "1"

@@ -13,7 +13,7 @@ summary: 昆曲把每个字拆成头、腹、尾，让旋律在字内部展开�
 terms: [kunqu, shuimo, chuanqi, gongdiao, banshi]
 figures: []
 works: []
-related: [m2-36, m2-38, m6-kunqu]
+related: [m2-36, m2-38, m2-37-kunqu]
 sources:
   - book: yuan-2016
     chapter: 第四章

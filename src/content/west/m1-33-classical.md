@@ -13,7 +13,7 @@ summary: 古典风格不是「好听」的别名，而是一套句法：对称�
 terms: [string-quartet-2, sonata-form, symphony]
 figures: []
 works: []
-related: [m1-32, m1-34, m4-haydn]
+related: [m1-32, m1-34, m4-04-haydn]
 sources:
   - book: ahwm-10e
     chapter: "23"

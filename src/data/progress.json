@@ -172,7 +172,7 @@
             {
               "order": 25,
               "slug": "m1-25-national",
-              "title": "一个意大利人，替法国发明了\"法国音乐\""
+              "title": "一个意大利人，替法国发明了「法国音乐」"
             },
             {
               "order": 26,
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 50,
+      "done": 63,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -360,17 +360,17 @@
             7
           ],
           "count": 7,
-          "done": 1,
+          "done": 7,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m2-01-origin",
+              "title": "原始时代的音乐：从贾湖骨笛说起"
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m2-02-shang",
+              "title": "夏商音乐：巫、青铜与礼器之声"
             },
             {
               "order": 3,
@@ -379,23 +379,23 @@
             },
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m2-04-springautumn",
+              "title": "春秋战国的音乐生活：郑卫之音与士人音乐观"
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m2-05-zenghouyi",
+              "title": "曾侯乙编钟：一钟双音与先秦律学"
             },
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m2-06-thought",
+              "title": "先秦音乐思想：从孔孟到老庄"
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m2-07-shijing",
+              "title": "《诗经》与诗乐：采诗制度下的风雅颂"
             }
           ]
         },
@@ -513,7 +513,7 @@
             {
               "order": 24,
               "slug": "m2-24-bianwen",
-              "title": "变文：佛经故事怎样变成可以\"听\"的讲唱"
+              "title": "变文：佛经故事怎样变成可以「听」的讲唱"
             },
             {
               "order": 25,
@@ -717,42 +717,42 @@
             63
           ],
           "count": 7,
-          "done": 0,
+          "done": 7,
           "chapters": [
             {
               "order": 57,
-              "slug": null,
-              "title": null
+              "slug": "m2-57-prc",
+              "title": "1949—1966：体制建设与民族化创作"
             },
             {
               "order": 58,
-              "slug": null,
-              "title": null
+              "slug": "m2-58-stage",
+              "title": "交响乐、歌剧与舞剧的本土化"
             },
             {
               "order": 59,
-              "slug": null,
-              "title": null
+              "slug": "m2-59-film",
+              "title": "电影音乐与大众音乐生活"
             },
             {
               "order": 60,
-              "slug": null,
-              "title": null
+              "slug": "m2-60-pop",
+              "title": "中国流行音乐的发展脉络"
             },
             {
               "order": 61,
-              "slug": null,
-              "title": null
+              "slug": "m2-61-newera",
+              "title": "新时期现代音乐与「新潮」"
             },
             {
               "order": 62,
-              "slug": null,
-              "title": null
+              "slug": "m2-62-tan-dun",
+              "title": "当代作曲家与跨文化实践"
             },
             {
               "order": 63,
-              "slug": null,
-              "title": null
+              "slug": "m2-63-heritage",
+              "title": "传统音乐的当代传承与非遗"
             }
           ]
         }
@@ -995,7 +995,7 @@
       "id": "M4",
       "name": "作曲家与流派",
       "total": 40,
-      "done": 18,
+      "done": 40,
       "parts": [
         {
           "name": "西方作曲家",
@@ -1004,7 +1004,7 @@
             22
           ],
           "count": 22,
-          "done": 18,
+          "done": 22,
           "chapters": [
             {
               "order": 1,
@@ -1098,23 +1098,23 @@
             },
             {
               "order": 19,
-              "slug": null,
-              "title": null
+              "slug": "m4-19-stravinsky",
+              "title": "斯特拉文斯基：不断重新发明自己的作曲家"
             },
             {
               "order": 20,
-              "slug": null,
-              "title": null
+              "slug": "m4-20-schoenberg",
+              "title": "勋伯格：从调性的瓦解到十二音"
             },
             {
               "order": 21,
-              "slug": null,
-              "title": null
+              "slug": "m4-21-bartok",
+              "title": "巴托克：民间音乐与现代语言的接合"
             },
             {
               "order": 22,
-              "slug": null,
-              "title": null
+              "slug": "m4-22-shostakovich",
+              "title": "肖斯塔科维奇：在体制与个人之间"
             }
           ]
         },
@@ -1125,37 +1125,37 @@
             28
           ],
           "count": 6,
-          "done": 0,
+          "done": 6,
           "chapters": [
             {
               "order": 23,
-              "slug": null,
-              "title": null
+              "slug": "m4-23-nieer",
+              "title": "聂耳：把时代节奏写进歌曲"
             },
             {
               "order": 24,
-              "slug": null,
-              "title": null
+              "slug": "m4-24-xianxinghai",
+              "title": "冼星海：从巴黎到延安"
             },
             {
               "order": 25,
-              "slug": null,
-              "title": null
+              "slug": "m4-25-he-qingting",
+              "title": "贺绿汀：学院训练与大众音乐的接合"
             },
             {
               "order": 26,
-              "slug": null,
-              "title": null
+              "slug": "m4-26-ma-sicong",
+              "title": "马思聪：小提琴与中国音乐语言"
             },
             {
               "order": 27,
-              "slug": null,
-              "title": null
+              "slug": "m4-27-huangzi",
+              "title": "黄自：学院派的抱负与局限"
             },
             {
               "order": 28,
-              "slug": null,
-              "title": null
+              "slug": "m4-28-tan-dun",
+              "title": "谭盾：跨文化写作与音色叙事"
             }
           ]
         },
@@ -1166,67 +1166,67 @@
             40
           ],
           "count": 12,
-          "done": 0,
+          "done": 12,
           "chapters": [
             {
               "order": 29,
-              "slug": null,
-              "title": null
+              "slug": "m4-29-plainchant",
+              "title": "格里高利圣咏传统：一个被追认的统一"
             },
             {
               "order": 30,
-              "slug": null,
-              "title": null
+              "slug": "m4-30-netherlands",
+              "title": "尼德兰乐派：模仿对位如何成为通用语言"
             },
             {
               "order": 31,
-              "slug": null,
-              "title": null
+              "slug": "m4-31-venice",
+              "title": "威尼斯乐派：空间与音响的协作"
             },
             {
               "order": 32,
-              "slug": null,
-              "title": null
+              "slug": "m4-32-camerata",
+              "title": "佛罗伦萨卡梅拉塔：一次关于「古希腊」的误读实验"
             },
             {
               "order": 33,
-              "slug": null,
-              "title": null
+              "slug": "m4-33-french-classical",
+              "title": "法国古典乐派：从吕利到格鲁克的歌剧改革"
             },
             {
               "order": 34,
-              "slug": null,
-              "title": null
+              "slug": "m4-34-mannheim",
+              "title": "曼海姆乐派：交响曲的「发动机」"
             },
             {
               "order": 35,
-              "slug": null,
-              "title": null
+              "slug": "m4-35-vienna-classical",
+              "title": "维也纳古典乐派：一个叙事怎样被塑造"
             },
             {
               "order": 36,
-              "slug": null,
-              "title": null
+              "slug": "m4-36-german-romantic",
+              "title": "德奥浪漫主义：从舒伯特到马勒的扩张"
             },
             {
               "order": 37,
-              "slug": null,
-              "title": null
+              "slug": "m4-37-italian-opera",
+              "title": "意大利歌剧传统：从美声到真实主义"
             },
             {
               "order": 38,
-              "slug": null,
-              "title": null
+              "slug": "m4-38-russian-national",
+              "title": "俄罗斯民族乐派：格林卡到强力集团"
             },
             {
               "order": 39,
-              "slug": null,
-              "title": null
+              "slug": "m4-39-second-vienna",
+              "title": "第二维也纳乐派：无调性与十二音的三次突围"
             },
             {
               "order": 40,
-              "slug": null,
-              "title": null
+              "slug": "m4-40-neoclassical",
+              "title": "新古典主义：回到形式，还是回到秩序"
             }
           ]
         }
@@ -1236,7 +1236,7 @@
       "id": "M5",
       "name": "作品鉴赏",
       "total": 10,
-      "done": 4,
+      "done": 10,
       "parts": [
         {
           "name": "十部经典",
@@ -1245,7 +1245,7 @@
             10
           ],
           "count": 10,
-          "done": 4,
+          "done": 10,
           "chapters": [
             {
               "order": 1,
@@ -1269,33 +1269,33 @@
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m5-figaro",
+              "title": "\"《费加罗的婚礼》：让人物在同一刻把话说完\""
             },
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m5-winterreise",
+              "title": "\"《冬之旅》：二十四首歌怎样走成一条不回头的路\""
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m5-preludes",
+              "title": "\"肖邦二十四首前奏曲：把一页纸写成一整个世界\""
             },
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m5-liushui",
+              "title": "\"古琴《流水》：一份不写节奏的谱，怎样流了五百年\""
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m5-mudanting",
+              "title": "\"《牡丹亭·惊梦》：当唱腔必须跟着每个字的声调走\""
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m5-crouching-tiger",
+              "title": "\"《卧虎藏龙》配乐：让大提琴用中文说话\""
             }
           ]
         }
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 210
+  "grandDone": 251
 }

@@ -1,6 +1,6 @@
 ---
 slug: m1-25-national
-title: 一个意大利人，替法国发明了"法国音乐"
+title: 一个意大利人，替法国发明了「法国音乐」
 subtitle: 从宫廷芭蕾到抒情悲剧，1650—1700
 module: M1
 part: 4

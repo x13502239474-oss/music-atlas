@@ -13,7 +13,7 @@ summary: 明清曲艺把「说」与「唱」交替成一套叙事技术：牌�
 terms: [tanci, guci, paizi, bianwen, zhugongdiao, guzici, changzhuan, banshi]
 figures: []
 works: []
-related: [m2-29, m2-39, m6-shuochang]
+related: [m2-29, m2-39, m6-06-shuochang]
 sources:
   - book: yuan-2016
     chapter: 第三章

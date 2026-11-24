@@ -13,7 +13,7 @@ summary: "本章从一处港口舞厅与一处岛屿庭院切入，讲清古巴�
 terms: [son, tango, recording]
 figures: []
 works: []
-related: [m6-35, m7-jazz, m1-45]
+related: [m6-35, m7-02-jazz-birth, m1-45]
 sources:
   - book: external
     section: "古巴松与阿根廷探戈通行共识（依据通行民族音乐学教材与学界共识，如《新格罗夫音乐与音乐家辞典》相关条目及拉美音乐研究通说）"

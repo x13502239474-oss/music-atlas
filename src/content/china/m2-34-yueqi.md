@@ -13,7 +13,7 @@ summary: 宋元两代是中国乐器史的一个转折点：以奚琴、马尾�
 terms: [erhu-precursor, erhu, pipa, washe, goulan, jiaofang, bayin, gongche]
 figures: []
 works: []
-related: [m2-27, m2-31, m6-yuezhong]
+related: [m2-27, m2-31, m6-08-yuezhong]
 sources:
   - book: yang-1981
     chapter: 第六编第十六章

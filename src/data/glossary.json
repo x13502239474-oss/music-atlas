@@ -2163,6 +2163,48 @@
       "latin": "video game music",
       "short": "为电子游戏创作的音乐，强调循环、互动与情绪引导。",
       "link": "m7-13"
+    },
+    {
+      "id": "stravinsky",
+      "zh": "斯特拉文斯基",
+      "latin": "I. Stravinsky",
+      "short": "俄裔作曲家，以《春之祭》与新古典主义转向重塑20世纪音乐。",
+      "link": "m4-19"
+    },
+    {
+      "id": "schoenberg",
+      "zh": "勋伯格",
+      "latin": "A. Schoenberg",
+      "short": "奥地利作曲家，创立十二音技法，引领表现主义与第二维也纳乐派。",
+      "link": "m4-20"
+    },
+    {
+      "id": "bartok",
+      "zh": "巴托克",
+      "latin": "B. Bartók",
+      "short": "匈牙利作曲家与民族音乐学家，把田野采集的民歌融入现代技法。",
+      "link": "m4-21"
+    },
+    {
+      "id": "shostakovich",
+      "zh": "肖斯塔科维奇",
+      "latin": "D. Shostakovich",
+      "short": "苏联作曲家，以交响曲在极权体制下表达复杂的双重话语。",
+      "link": "m4-22"
+    },
+    {
+      "id": "ma-sicong",
+      "zh": "马思聪",
+      "latin": "",
+      "short": "中国近代作曲家与小提琴家，以《思乡曲》等探索民族化的器乐语言。",
+      "link": "m4-26"
+    },
+    {
+      "id": "tan-dun",
+      "zh": "谭盾",
+      "latin": "",
+      "short": "中国当代作曲家，以跨文化创作与实验性作品活跃于国际舞台。",
+      "link": "m4-28"
     }
   ]
 }

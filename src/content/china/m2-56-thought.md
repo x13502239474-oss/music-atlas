@@ -13,7 +13,7 @@ summary: 从王光祈的比较音乐学到青主的音乐美学、从学院派�
 terms: [xiaoyoumei, zhao-yuanren, liujinhui, huangzi, yinyuejiaoyu, erhu-precursor]
 figures: []
 works: []
-related: [m2-49, m2-55, m6-fangfa]
+related: [m2-49, m2-55, m6-01-ethnomusicology]
 sources:
   - book: wang-2018
     chapter: "第八章"

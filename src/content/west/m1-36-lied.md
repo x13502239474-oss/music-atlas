@@ -13,7 +13,7 @@ summary: 舒伯特让一个歌手唱四个角色，让钢琴负责马蹄、敲�
 terms: [lied, strophic, through-composed, character-piece, rubato]
 figures: []
 works: []
-related: [m1-35, m1-37, m5-schubert-winterreise]
+related: [m1-35, m1-37, m5-winterreise]
 sources:
   - book: ahwm-10e
     chapter: "25"

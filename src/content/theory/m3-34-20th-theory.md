@@ -13,7 +13,7 @@ summary: "本章从调性分析在现代音乐中碰壁讲起，介绍音级集�
 terms: [set-theory, atonality, interval, chord]
 figures: []
 works: []
-related: [m3-33, m1-49, m5-listening]
+related: [m3-33, m1-49, m5-beethoven-5]
 sources:
   - book: ahwm-10e
     chapter: "33"

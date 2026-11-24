@@ -13,7 +13,7 @@ summary: "本章从一间城市录音棚切入，讲清非洲音乐在城市化�
 terms: [recording, call-response]
 figures: []
 works: []
-related: [m6-22, m1-45, m7-blues]
+related: [m6-22, m1-45, m7-01-blues]
 sources:
   - book: external
     section: "非洲流行音乐与散居研究通行共识（依据通行民族音乐学教材与学界共识，如《新格罗夫音乐与音乐家辞典》相关条目及非洲流行音乐研究文献）"

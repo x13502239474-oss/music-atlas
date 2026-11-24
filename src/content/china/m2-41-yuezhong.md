@@ -13,7 +13,7 @@ summary: 明清是民间器乐从「器乐」走向「乐种」的关键期：�
 terms: [guchui, gongchepu, erhu, pipa, paizi, taoshu, banshi, bayin]
 figures: []
 works: []
-related: [m2-34, m2-40, m6-yuezhong]
+related: [m2-34, m2-40, m6-08-yuezhong]
 sources:
   - book: yuan-2016
     chapter: 第五章

@@ -13,7 +13,7 @@ summary: 本章提供一套分析流行音乐的工具：声音、歌词、产�
 terms: [form, recording, film-score]
 figures: []
 works: []
-related: [m7-17, m3-23, m5-listening]
+related: [m7-17, m3-23, m5-beethoven-5]
 sources:
   - book: external
     section: "依据通行音乐研究与音乐教育共识（流行音乐分析、曲式学与聆听教学）"
