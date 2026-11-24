@@ -1305,7 +1305,7 @@
       "id": "M6",
       "name": "世界民族音乐",
       "total": 36,
-      "done": 22,
+      "done": 28,
       "parts": [
         {
           "name": "民族音乐学方法",
@@ -1453,7 +1453,7 @@
             23
           ],
           "count": 4,
-          "done": 3,
+          "done": 4,
           "chapters": [
             {
               "order": 20,
@@ -1472,8 +1472,8 @@
             },
             {
               "order": 23,
-              "slug": null,
-              "title": null
+              "slug": "m6-23-popular",
+              "title": "\"非洲音乐的流行化与散居：声音怎样跨过大西洋\""
             }
           ]
         },
@@ -1484,27 +1484,27 @@
             27
           ],
           "count": 4,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 24,
-              "slug": null,
-              "title": null
+              "slug": "m6-24-gagaku",
+              "title": "\"日本雅乐：从唐乐到国风\""
             },
             {
               "order": 25,
-              "slug": null,
-              "title": null
+              "slug": "m6-25-noh",
+              "title": "\"能乐：当歌唱就是戏剧\""
             },
             {
               "order": 26,
-              "slug": null,
-              "title": null
+              "slug": "m6-26-pansori",
+              "title": "\"盘索里：一人一台戏\""
             },
             {
               "order": 27,
-              "slug": null,
-              "title": null
+              "slug": "m6-27-mongolian",
+              "title": "\"蒙古长调与马头琴\""
             }
           ]
         },
@@ -1515,12 +1515,12 @@
             31
           ],
           "count": 4,
-          "done": 0,
+          "done": 1,
           "chapters": [
             {
               "order": 28,
-              "slug": null,
-              "title": null
+              "slug": "m6-28-gamelan",
+              "title": "\"甘美兰：音色、循环与仪式\""
             },
             {
               "order": 29,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 172
+  "grandDone": 178
 }
