@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 44,
+      "done": 50,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -656,7 +656,7 @@
             56
           ],
           "count": 10,
-          "done": 4,
+          "done": 10,
           "chapters": [
             {
               "order": 47,
@@ -680,33 +680,33 @@
             },
             {
               "order": 51,
-              "slug": null,
-              "title": null
+              "slug": "m2-51-huangzi",
+              "title": "黄自及其同代作曲家"
             },
             {
               "order": 52,
-              "slug": null,
-              "title": null
+              "slug": "m2-52-left",
+              "title": "左翼音乐运动：聂耳、吕骥"
             },
             {
               "order": 53,
-              "slug": null,
-              "title": null
+              "slug": "m2-53-he-xian",
+              "title": "贺绿汀与冼星海"
             },
             {
               "order": 54,
-              "slug": null,
-              "title": null
+              "slug": "m2-54-occupied",
+              "title": "沦陷区与国统区：一条被割裂的河"
             },
             {
               "order": 55,
-              "slug": null,
-              "title": null
+              "slug": "m2-55-yanan",
+              "title": "延安的音乐：秧歌怎样走上舞台，转变成歌剧"
             },
             {
               "order": 56,
-              "slug": null,
-              "title": null
+              "slug": "m2-56-thought",
+              "title": "近代音乐思想：一场没有裁决的争论"
             }
           ]
         },
@@ -762,7 +762,7 @@
       "id": "M3",
       "name": "音乐理论",
       "total": 34,
-      "done": 0,
+      "done": 4,
       "parts": [
         {
           "name": "阶段一 音乐基础",
@@ -771,27 +771,27 @@
             5
           ],
           "count": 5,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m3-01-tone",
+              "title": "声音的材料：乐音体系"
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m3-02-tuning",
+              "title": "音律：为什么钢琴是「不准」的"
             },
             {
               "order": 3,
-              "slug": null,
-              "title": null
+              "slug": "m3-03-staff",
+              "title": "五线谱：把声音写在纸上"
             },
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m3-04-rhythm",
+              "title": "节奏与节拍"
             },
             {
               "order": 5,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 94
+  "grandDone": 104
 }
