@@ -2128,6 +2128,41 @@
       "latin": "film score",
       "short": "为电影创作的音乐，服务于叙事、情绪与节奏，含同步与画外音等手法。",
       "link": "m7-12"
+    },
+    {
+      "id": "mtv",
+      "zh": "MTV",
+      "latin": "MTV",
+      "short": "1981年开播的音乐电视网，以音乐录影带重塑了流行音乐的视觉传播。",
+      "link": "m7-11"
+    },
+    {
+      "id": "copyright",
+      "zh": "音乐版权",
+      "latin": "music copyright",
+      "short": "保护音乐作品与录音的法律权利，含词曲版权与录音制品权两类。",
+      "link": "m7-16"
+    },
+    {
+      "id": "streaming",
+      "zh": "流媒体",
+      "latin": "streaming",
+      "short": "通过网络实时播放音乐的分发方式，改变了专辑消费与收入模式。",
+      "link": "m7-14"
+    },
+    {
+      "id": "media-shift",
+      "zh": "媒介变迁",
+      "latin": "",
+      "short": "音乐从唱片、广播、磁带到流媒体的载体演变，每次都重塑生产与聆听。",
+      "link": "m7-17"
+    },
+    {
+      "id": "game-music",
+      "zh": "游戏音乐",
+      "latin": "video game music",
+      "short": "为电子游戏创作的音乐，强调循环、互动与情绪引导。",
+      "link": "m7-13"
     }
   ]
 }

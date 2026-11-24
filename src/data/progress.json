@@ -1592,7 +1592,7 @@
       "id": "M7",
       "name": "现代与流行音乐",
       "total": 18,
-      "done": 9,
+      "done": 16,
       "parts": [
         {
           "name": "流派史",
@@ -1601,7 +1601,7 @@
             14
           ],
           "count": 14,
-          "done": 9,
+          "done": 14,
           "chapters": [
             {
               "order": 1,
@@ -1650,28 +1650,28 @@
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m7-10-hiphop",
+              "title": "嘻哈：从布朗克斯的街区到世界"
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m7-11-industry",
+              "title": "流行音乐工业：谁在替我们决定听什么"
             },
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m7-12-film",
+              "title": "电影配乐：让画面开口说话的音乐"
             },
             {
               "order": 13,
-              "slug": null,
-              "title": null
+              "slug": "m7-13-game",
+              "title": "会重复的音乐：游戏音乐与互动的逻辑"
             },
             {
               "order": 14,
-              "slug": null,
-              "title": null
+              "slug": "m7-14-streaming",
+              "title": "播放列表之外：流媒体、全球化与地方音乐"
             }
           ]
         },
@@ -1682,17 +1682,17 @@
             18
           ],
           "count": 4,
-          "done": 0,
+          "done": 2,
           "chapters": [
             {
               "order": 15,
-              "slug": null,
-              "title": null
+              "slug": "m7-15-recording",
+              "title": "录音技术史：从蜡筒到硬盘"
             },
             {
               "order": 16,
-              "slug": null,
-              "title": null
+              "slug": "m7-16-copyright",
+              "title": "音乐产业与版权：一首歌如何变成一份收入"
             },
             {
               "order": 17,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 195
+  "grandDone": 202
 }
