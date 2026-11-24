@@ -1162,6 +1162,104 @@
       "latin": "",
       "short": "京剧主要声腔之一，源于山陕梆子，节奏明快，与二黄合称皮黄。",
       "link": "m2-38"
+    },
+    {
+      "id": "impressionism",
+      "zh": "印象主义",
+      "latin": "impressionism",
+      "short": "德彪西开创的音乐风格，以全音阶、平行和弦、模糊调性与音色薄雾取代明确的功能和声。",
+      "link": "m1-42"
+    },
+    {
+      "id": "atonality",
+      "zh": "无调性",
+      "latin": "atonality",
+      "short": "摒弃调性中心与功能和声的写法，勋伯格在表现主义时期走向这一极端。",
+      "link": "m1-43"
+    },
+    {
+      "id": "twelve-tone",
+      "zh": "十二音技法",
+      "latin": "Zwölftontechnik",
+      "short": "勋伯格创立的作曲法，以一个十二音序列及其变形组织全曲，取代调性作为结构原则。",
+      "link": "m1-43"
+    },
+    {
+      "id": "expressionism",
+      "zh": "表现主义",
+      "latin": "Expressionismus",
+      "short": "以扭曲、紧张的音乐语言表现内心焦虑的艺术潮流，第二维也纳乐派为其音乐代表。",
+      "link": "m1-43"
+    },
+    {
+      "id": "primitivism",
+      "zh": "原始主义",
+      "latin": "primitivism",
+      "short": "以强烈节奏、粗粝音响与原始题材冲击欧洲传统的潮流，《春之祭》是其标志。",
+      "link": "m1-43"
+    },
+    {
+      "id": "neoclassicism",
+      "zh": "新古典主义",
+      "latin": "neoclassicism",
+      "short": "返回巴洛克与古典的体裁、调性与形式，但以20世纪的和声语言重写，斯特拉文斯基与欣德米特为代表。",
+      "link": "m1-46"
+    },
+    {
+      "id": "whole-tone",
+      "zh": "全音阶",
+      "latin": "whole-tone scale",
+      "short": "由全音构成的六音音阶，无半音倾向、调性模糊，是德彪西色彩性语言的重要材料。",
+      "link": "m1-42"
+    },
+    {
+      "id": "jazz",
+      "zh": "爵士乐",
+      "latin": "jazz",
+      "short": "源于美国黑人与克里奥尔音乐传统，以即兴、摇摆节奏与蓝调音为特征，20世纪深刻影响流行与艺术音乐。",
+      "link": "m1-45"
+    },
+    {
+      "id": "blues",
+      "zh": "布鲁斯",
+      "latin": "blues",
+      "short": "非裔美国人的歌声与和声形式，以降三、降五、降七的蓝调音与十二小节结构为标志。",
+      "link": "m1-45"
+    },
+    {
+      "id": "recording",
+      "zh": "录音",
+      "latin": "recording",
+      "short": "声音的存储与复制技术，从蜡筒到唱片，改变了音乐的生产、传播与聆听方式。",
+      "link": "m1-45"
+    },
+    {
+      "id": "equal-temperament",
+      "zh": "十二平均律",
+      "latin": "equal temperament",
+      "short": "将一个八度等分为十二个半音的律制，使转调自由，朱载堉最早以数学精确算出其比率。",
+      "link": "m2-43"
+    },
+    {
+      "id": "zhuzaiyu",
+      "zh": "朱载堉",
+      "latin": "",
+      "short": "明代宗室律学家，以密率（十二平均律）计算著称，著《乐律全书》。",
+      "link": "m2-43"
+    },
+    {
+      "id": "jun-ge",
+      "zh": "军歌",
+      "latin": "",
+      "short": "清末民初新式军队与学堂所用的集体歌唱，采用进行曲节奏，是西式音乐大众化的早期形式。",
+      "link": "m2-46"
+    },
+    {
+      "id": "military-band",
+      "zh": "军乐队",
+      "latin": "military band",
+      "short": "近代由西方传入的管乐合奏编制，用于仪仗、集会与新式军乐演奏。",
+      "link": "m2-46"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 41,
+      "done": 45,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -285,22 +285,22 @@
             46
           ],
           "count": 5,
-          "done": 0,
+          "done": 4,
           "chapters": [
             {
               "order": 42,
-              "slug": null,
-              "title": null
+              "slug": "m1-42-impressionism",
+              "title": "\"世纪之交：印象主义与象征主义\""
             },
             {
               "order": 43,
-              "slug": null,
-              "title": null
+              "slug": "m1-43-modernism",
+              "title": "\"现代主义的激变\""
             },
             {
               "order": 44,
-              "slug": null,
-              "title": null
+              "slug": "m1-44-nationalism-modern",
+              "title": "民族主义与现代性：民歌被录音机固定之后"
             },
             {
               "order": 45,
@@ -309,8 +309,8 @@
             },
             {
               "order": 46,
-              "slug": null,
-              "title": null
+              "slug": "m1-46-classical-tradition",
+              "title": "两次大战之间：古典传统"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 37,
+      "done": 41,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -585,7 +585,7 @@
             46
           ],
           "count": 12,
-          "done": 8,
+          "done": 12,
           "chapters": [
             {
               "order": 35,
@@ -629,23 +629,23 @@
             },
             {
               "order": 43,
-              "slug": null,
-              "title": null
+              "slug": "m2-43-zhuzaiyu",
+              "title": "朱载堉与十二平均律：一把算盘算出的八度"
             },
             {
               "order": 44,
-              "slug": null,
-              "title": null
+              "slug": "m2-44-legu",
+              "title": "明清乐谱与理论著作：一页谱留下的空缺"
             },
             {
               "order": 45,
-              "slug": null,
-              "title": null
+              "slug": "m2-45-traditional-new",
+              "title": "鸦片战争后传统音乐的新发展"
             },
             {
               "order": 46,
-              "slug": null,
-              "title": null
+              "slug": "m2-46-western-in",
+              "title": "西洋音乐传入的路径"
             }
           ]
         },
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 78
+  "grandDone": 86
 }
