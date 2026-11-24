@@ -995,7 +995,7 @@
       "id": "M4",
       "name": "作曲家与流派",
       "total": 40,
-      "done": 6,
+      "done": 12,
       "parts": [
         {
           "name": "西方作曲家",
@@ -1004,7 +1004,7 @@
             22
           ],
           "count": 22,
-          "done": 6,
+          "done": 12,
           "chapters": [
             {
               "order": 1,
@@ -1038,33 +1038,33 @@
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m4-07-schubert",
+              "title": "舒伯特：把整个世界的重量交给一架钢琴"
             },
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m4-08-chopin",
+              "title": "肖邦：一个人的钢琴，一个民族的口音"
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m4-09-schumann",
+              "title": "舒曼：把读过的书写进钢琴里"
             },
             {
               "order": 10,
-              "slug": null,
-              "title": null
+              "slug": "m4-10-liszt",
+              "title": "李斯特：把钢琴变成乐队，把乐队变成故事"
             },
             {
               "order": 11,
-              "slug": null,
-              "title": null
+              "slug": "m4-11-brahms",
+              "title": "勃拉姆斯：在旧形式里活出新情感"
             },
             {
               "order": 12,
-              "slug": null,
-              "title": null
+              "slug": "m4-12-wagner",
+              "title": "瓦格纳：让声音从看不见的地方来"
             },
             {
               "order": 13,
@@ -1236,7 +1236,7 @@
       "id": "M5",
       "name": "作品鉴赏",
       "total": 10,
-      "done": 2,
+      "done": 4,
       "parts": [
         {
           "name": "十部经典",
@@ -1245,7 +1245,7 @@
             10
           ],
           "count": 10,
-          "done": 2,
+          "done": 4,
           "chapters": [
             {
               "order": 1,
@@ -1259,13 +1259,13 @@
             },
             {
               "order": 3,
-              "slug": null,
-              "title": null
+              "slug": "m5-appassionata",
+              "title": "\"贝多芬第二十三钢琴奏鸣曲「热情」：把奏鸣曲式撑到极限\""
             },
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m5-death-maiden",
+              "title": "\"舒伯特第十四弦乐四重奏「死神与少女」：四件乐器怎样轮流说话\""
             },
             {
               "order": 5,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 142
+  "grandDone": 150
 }

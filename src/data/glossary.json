@@ -1785,6 +1785,48 @@
       "latin": "ritornello",
       "short": "协奏曲中乐队全奏的主题性段落，与独奏段落交替出现。",
       "link": "m5-02"
+    },
+    {
+      "id": "schubert",
+      "zh": "舒伯特",
+      "latin": "F. Schubert",
+      "short": "早期浪漫主义作曲家，以艺术歌曲与「未完成」交响曲著称。",
+      "link": "m4-07"
+    },
+    {
+      "id": "chopin",
+      "zh": "肖邦",
+      "latin": "F. Chopin",
+      "short": "波兰裔法国钢琴作曲家，以夜曲、玛祖卡与练习曲拓展钢琴的表现力。",
+      "link": "m4-08"
+    },
+    {
+      "id": "schumann",
+      "zh": "舒曼",
+      "latin": "R. Schumann",
+      "short": "德国浪漫主义作曲家与评论家，以钢琴套曲与艺术歌曲表达文学性。",
+      "link": "m4-09"
+    },
+    {
+      "id": "liszt",
+      "zh": "李斯特",
+      "latin": "F. Liszt",
+      "short": "匈牙利作曲家与钢琴家，以交响诗与超技练习曲开创新的音乐体裁。",
+      "link": "m4-10"
+    },
+    {
+      "id": "brahms",
+      "zh": "勃拉姆斯",
+      "latin": "J. Brahms",
+      "short": "德国作曲家，以交响曲与室内乐在古典形式中注入浪漫情感。",
+      "link": "m4-11"
+    },
+    {
+      "id": "wagner",
+      "zh": "瓦格纳",
+      "latin": "R. Wagner",
+      "short": "德国作曲家，以乐剧与主导动机体系重塑歌剧观念。",
+      "link": "m4-12"
     }
   ]
 }
