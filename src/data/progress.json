@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-23",
+  "generated": "2026-11-24",
   "modules": [
     {
       "id": "M1",
       "name": "世界音乐史",
       "total": 50,
-      "done": 39,
+      "done": 41,
       "parts": [
         {
           "name": "第一篇 古代音乐文明",
@@ -239,7 +239,7 @@
             41
           ],
           "count": 7,
-          "done": 5,
+          "done": 7,
           "chapters": [
             {
               "order": 35,
@@ -268,13 +268,13 @@
             },
             {
               "order": 40,
-              "slug": null,
-              "title": null
+              "slug": "m1-40-late-romantic",
+              "title": "晚期浪漫主义：调性在极限处绷紧"
             },
             {
               "order": 41,
-              "slug": null,
-              "title": null
+              "slug": "m1-41-nationalism",
+              "title": "民族乐派：发现传统，还是发明传统"
             }
           ]
         },
@@ -351,7 +351,7 @@
       "id": "M2",
       "name": "中国音乐史",
       "total": 63,
-      "done": 31,
+      "done": 37,
       "parts": [
         {
           "name": "第一篇 先秦",
@@ -585,7 +585,7 @@
             46
           ],
           "count": 12,
-          "done": 2,
+          "done": 8,
           "chapters": [
             {
               "order": 35,
@@ -594,8 +594,8 @@
             },
             {
               "order": 36,
-              "slug": null,
-              "title": null
+              "slug": "m2-36-shengqiang",
+              "title": "声腔：一种唱法怎样长成一个剧种"
             },
             {
               "order": 37,
@@ -604,28 +604,28 @@
             },
             {
               "order": 38,
-              "slug": null,
-              "title": null
+              "slug": "m2-38-jingju",
+              "title": "京剧：一套皮黄怎样在北京长成国剧"
             },
             {
               "order": 39,
-              "slug": null,
-              "title": null
+              "slug": "m2-39-difangxi",
+              "title": "地方戏的两条路：梆子腔与滩簧"
             },
             {
               "order": 40,
-              "slug": null,
-              "title": null
+              "slug": "m2-40-quyi",
+              "title": "曲艺音乐：说与唱的交替"
             },
             {
               "order": 41,
-              "slug": null,
-              "title": null
+              "slug": "m2-41-yuezhong",
+              "title": "民间器乐与乐种：从「丝竹」到「鼓乐」的活态传统"
             },
             {
               "order": 42,
-              "slug": null,
-              "title": null
+              "slug": "m2-42-guqin",
+              "title": "古琴音乐与琴派：从减字谱到「清微淡远」"
             },
             {
               "order": 43,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 70
+  "grandDone": 78
 }
