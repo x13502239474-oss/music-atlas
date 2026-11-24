@@ -1305,7 +1305,7 @@
       "id": "M6",
       "name": "世界民族音乐",
       "total": 36,
-      "done": 0,
+      "done": 9,
       "parts": [
         {
           "name": "民族音乐学方法",
@@ -1314,22 +1314,22 @@
             3
           ],
           "count": 3,
-          "done": 0,
+          "done": 3,
           "chapters": [
             {
               "order": 1,
-              "slug": null,
-              "title": null
+              "slug": "m6-01-ethnomusicology",
+              "title": "\"民族音乐学：把音乐放回文化里\""
             },
             {
               "order": 2,
-              "slug": null,
-              "title": null
+              "slug": "m6-02-fieldwork",
+              "title": "\"田野：到音乐发生的地方去\""
             },
             {
               "order": 3,
-              "slug": null,
-              "title": null
+              "slug": "m6-03-transcription",
+              "title": "\"记谱与分析：把声音写下来意味着什么\""
             }
           ]
         },
@@ -1340,37 +1340,37 @@
             11
           ],
           "count": 8,
-          "done": 0,
+          "done": 6,
           "chapters": [
             {
               "order": 4,
-              "slug": null,
-              "title": null
+              "slug": "m6-04-folksong",
+              "title": "\"民歌：号子、山歌与小调\""
             },
             {
               "order": 5,
-              "slug": null,
-              "title": null
+              "slug": "m6-05-dance",
+              "title": "\"舞蹈音乐：从花鼓到木卡姆\""
             },
             {
               "order": 6,
-              "slug": null,
-              "title": null
+              "slug": "m6-06-shuochang",
+              "title": "\"说唱音乐：曲种与结构\""
             },
             {
               "order": 7,
-              "slug": null,
-              "title": null
+              "slug": "m6-07-xiqu",
+              "title": "\"戏曲音乐：四大声腔与唱做念打\""
             },
             {
               "order": 8,
-              "slug": null,
-              "title": null
+              "slug": "m6-08-yuezhong",
+              "title": "\"器乐与乐种：丝竹、吹打与锣鼓\""
             },
             {
               "order": 9,
-              "slug": null,
-              "title": null
+              "slug": "m6-09-religious",
+              "title": "\"宗教与祭祀音乐\""
             },
             {
               "order": 10,
@@ -1710,5 +1710,5 @@
     }
   ],
   "grandTotal": 251,
-  "grandDone": 150
+  "grandDone": 159
 }

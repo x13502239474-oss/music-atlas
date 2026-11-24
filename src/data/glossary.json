@@ -1827,6 +1827,62 @@
       "latin": "R. Wagner",
       "short": "德国作曲家，以乐剧与主导动机体系重塑歌剧观念。",
       "link": "m4-12"
+    },
+    {
+      "id": "ethnomusicology",
+      "zh": "民族音乐学",
+      "latin": "ethnomusicology",
+      "short": "研究音乐与文化关系的学科，强调田野调查与文化语境。",
+      "link": "m6-01"
+    },
+    {
+      "id": "fieldwork",
+      "zh": "田野调查",
+      "latin": "fieldwork",
+      "short": "研究者到音乐发生的现场进行观察、录音与访谈的方法。",
+      "link": "m6-01"
+    },
+    {
+      "id": "emic-etic",
+      "zh": "主位与客位",
+      "latin": "emic/etic",
+      "short": "主位是局内人的视角，客位是研究者的分析视角，两者需区分。",
+      "link": "m6-02"
+    },
+    {
+      "id": "transcription",
+      "zh": "记谱",
+      "latin": "transcription",
+      "short": "把听到的音乐写成谱面的过程，涉及选择与取舍。",
+      "link": "m6-03"
+    },
+    {
+      "id": "folk-song",
+      "zh": "民歌",
+      "latin": "",
+      "short": "民众口头传承的歌曲，按体裁常分号子、山歌、小调。",
+      "link": "m6-04"
+    },
+    {
+      "id": "haozi",
+      "zh": "号子",
+      "latin": "",
+      "short": "伴随集体劳动的民歌，节奏与劳动动作同步。",
+      "link": "m6-04"
+    },
+    {
+      "id": "shange",
+      "zh": "山歌",
+      "latin": "",
+      "short": "在山野田间演唱的民歌，节奏自由、音调高亢。",
+      "link": "m6-04"
+    },
+    {
+      "id": "xiaodiao",
+      "zh": "小调",
+      "latin": "",
+      "short": "流传于城镇乡村的民歌小曲，结构规整、常经艺人加工。",
+      "link": "m6-04"
     }
   ]
 }
